@@ -101,11 +101,12 @@ body {
     margin: 10px 30px;
     padding: 8px 20px;
     height: 60px;
-    border: 1px solid var(--red-color);
+    border: 0;
+    outline: 1px solid var(--red-color);
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: .2rem;
+    border-radius: 3px;
     cursor: pointer;
     position: relative;
 }
@@ -123,6 +124,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    outline: 1px solid var(--red-color);
+    border-radius: 3px;
     transition: transform .3s ease;
     transform: scaleX(0);
     transform-origin: 0% 50%;

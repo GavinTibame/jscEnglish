@@ -106,6 +106,7 @@ section {
 }
 
 .course__wrapper {
+    /* min-width: 320px; */
     display: grid;
     margin: 0 130px;
     grid-template-rows: repeat(3, 1fr);
