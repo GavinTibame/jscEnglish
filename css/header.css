@@ -1,0 +1,137 @@
+@import url(./reset.css);
+
+:root {
+    --bg-color: #fff;
+    --font-color: #231f20;
+    --gray-color: #d9d9d9;
+    --purple-color: #5b417c;
+    --red-color: #c6544e;
+    --red-tgh-color: rgba(198, 84, 78, .5);
+    --blue-color: #69bdce;
+    --yellow-color: #d5d53c;
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--gray-color);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.header__wrapper {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.header__wrapper>a {
+    width: 450px
+}
+
+.header img {
+    max-width: 100%;
+}
+
+.header__wrapper a img {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    max-width: 1920px;
+    height: 80px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header__nav {}
+
+.header__nav__menu {
+    display: flex;
+}
+
+.header__nav__item {}
+
+.header__nav__item a {
+    flex-grow: 1;
+    display: block;
+    width: 100px;
+    line-height: 80px;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: .1s;
+}
+
+.header__nav__item a:hover {
+    color: var(--red-color);
+    text-decoration: underline;
+}
+
+.header__nav__login {
+    background-color: var(--red-color);
+    width: 120px;
+    margin: 10px 30px;
+    padding: 8px 20px;
+    height: 60px;
+    border: 1px solid var(--red-color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: .2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.header span {
+    position: relative;
+    z-index: 1
+}
+
+.header__nav__login::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+}
+
+.header__nav__login:hover {
+    color: var(--red-color);
+}
+
+.header__nav__login:hover::before {
+    transform: scaleX(1);
+}

@@ -1,0 +1,343 @@
+.homepage {}
+
+.container {
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.banner {
+    position: relative;
+    overflow: visible;
+}
+
+.banner:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner video {
+    position: fixed;
+    z-index: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+}
+
+/* .banner__bottom {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 900px;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+} */
+
+.content {
+    background-color: var(--bg-color);
+    background-image: url(../img/bg.svg);
+    background-repeat: repeat-y;
+    position: relative;
+    z-index: 1;
+    margin-top: 1px;
+    /* padding-top: 1px; */
+    padding-bottom: 1px;
+}
+
+.homepage .hp__course {
+    position: relative;
+    margin: 590px 0 110px;
+    padding-top: 100px;
+}
+
+.title__zh {
+    color: var(--red-color);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    letter-spacing: .2rem;
+    font-weight: 550;
+}
+
+.title {
+    min-width: 1440px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.title span {
+    color: transparent;
+    font-size: 8rem;
+    font-weight: bold;
+    -webkit-text-stroke: 3px var(--red-color);
+    margin: 0 80px;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    display: block;
+    flex: 1 1 auto;
+    border-top: 1px solid var(--red-color);
+}
+
+.course__wrapper {
+    min-width: 320px;
+    width: 1440px;
+    margin: 0 130px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 300px);
+    box-sizing: border-box;
+}
+
+.course__list {
+    display: block;
+    width: 250px;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 auto 50px;
+    box-sizing: border-box;
+}
+
+.course__list a {
+    background-position: center;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .6);
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+/* .course__list a::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .3 ease;
+    transform: scaleX(0);
+    z-index: 0;
+    transform-origin: 0% 50%;
+}
+
+.course__list a:hover::before {
+    transform: scaleX(1)
+}
+
+.course__list a::after {
+    content: "";
+    display: block;
+    background-color: var(--red-tgh-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+} */
+
+.course__list span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 160px
+}
+
+.course__list span h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    word-spacing: 0.7em;
+    margin-bottom: 6px;
+}
+
+.course__list span h6 {
+
+    text-align: center;
+}
+
+.seeMore {
+    margin: 60px auto 190px;
+    display: block;
+    max-width: 370px;
+    line-height: 50px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid var(--font-color);
+    text-decoration: none;
+    color: var(--font-color);
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.seeMore span {
+    position: relative;
+    z-index: 2;
+}
+
+.seeMore::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--red-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    outline: 1px solid var(--red-color)
+}
+
+.seeMore:hover {
+    color: var(--bg-color)
+}
+
+.seeMore:hover::before {
+    transform: scaleX(1)
+}
+
+.seeMore::after {
+    background-image: url(../img/icon_btn1_arrow.svg);
+}
+
+section {
+    min-width: 320px;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.profile__ctn {
+    display: grid;
+    min-width: 320px;
+    margin: 0 100px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.profile__ctn .profile__single {
+    margin: 20px 50px;
+    padding: 40px;
+    border: 1px solid var(--gray-color);
+    background-color: var(--bg-color);
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+}
+
+.profile__single .profile {
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+
+.profile__single .profile__icon img {
+    width: 150px;
+    border-radius: 100%;
+    border: 1px solid var(--gray-color);
+}
+
+.profile__inner {
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px;
+}
+
+.profile__single .profile h5 {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    letter-spacing: .2em;
+}
+
+.profile__single .profile .social {
+    display: flex;
+}
+
+.profile .social li {
+    margin-right: 10px;
+}
+
+.profile .social a {
+    color: rgba(35, 31, 32, .6)
+}
+
+.profile__single .intro {
+    margin: 10px;
+}
+
+.profile__single .intro p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.profile__single .intro h6 {}
+
+.intro .otherCourse {
+    display: flex;
+}
+
+.intro .otherCourse__btn {}
+
+.intro .otherCourse__btn li {}
+
+.otherCourse__btn li a {
+    font-size: .8rem;
+}
+
+.feedback__group {}
+
+.feedback__group li {}
+
+.feedback {}
+
+.feedback p {}
+
+.feedback h6 {}
+
+.feedback__group .list__btn {}
+
+.feedback__btn {}
+
+.article__ctn {}
+
+.article__single {}
+
+.article__single a {}
+
+.article__single img {
+    width: 415px;
+}
+
+.article__single h5 {}
+
+.article__single p {}

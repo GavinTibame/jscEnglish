@@ -1,0 +1,91 @@
+footer {
+    background-image: url(/img/footerBanner.jpg);
+    width: 100%;
+    width: 1440px;
+    height: 680px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 120%;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .6);
+}
+
+.footer__menu {
+    padding: 190px 30px 0px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.footer__menu * {
+    flex-grow: 1;
+}
+
+.logo {}
+
+.logo a img {
+    width: 150px;
+    box-shadow: unset;
+}
+
+dl {}
+
+footer dt {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.about {}
+
+.toggle:hover {
+    text-decoration: underline;
+}
+
+.sub {}
+
+footer li {
+    margin-bottom: 30px;
+}
+
+footer a {
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+.course {}
+
+.lecturer {}
+
+.blog {}
+
+.other {}
+
+.footerContact {
+    margin: 80px 0 0;
+}
+
+.footerContact p {
+    color: var(--bg-color);
+    margin: 20px 0;
+}
+
+.follow {
+    display: flex;
+    width: 120px;
+}
+
+.follow img {
+    width: 30px;
+    margin: 0;
+
+}
+
+.footer__footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+.footer__footer p {
+    line-height: 80px;
+    text-align: center;
+}
