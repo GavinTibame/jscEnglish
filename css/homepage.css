@@ -69,7 +69,7 @@ section {
 }
 
 .homepage .hp__course {
-    margin: 590px 0 110px;
+    margin: 640px 0 110px;
     padding-top: 100px;
 }
 
@@ -271,7 +271,11 @@ section {
 }
 
 .profile .social a {
-    color: rgba(35, 31, 32, .6)
+    color: rgba(35, 31, 32, .6);
+}
+
+.profile .social a:hover {
+    color: var(--red-color);
 }
 
 .profile__single .intro {
@@ -315,13 +319,21 @@ section {
     text-align: center;
     text-decoration: none;
     width: fit-content;
-    background-color: var(--red-color);
-    color: var(--bg-color);
+    background-color: var(--bg-color);
+    color: var(--red-color);
     padding: 10px 10px;
     margin: 5px 5px 0 0;
     font-size: .8rem;
     border-radius: 5px;
     box-sizing: content-box;
+    outline: 1px solid var(--red-color);
+    transition: all .2s;
+}
+
+.otherCourse__btn li a:hover {
+    background-color: var(--red-color);
+    color: var(--bg-color);
+    outline: 1px solid var(--bg-color);
 }
 
 .feedback__group {
@@ -377,16 +389,45 @@ section {
     background-color: var(--gray-color);
 }
 
-.article__ctn {}
-
-.article__single {}
-
-.article__single a {}
-
-.article__single img {
-    width: 415px;
+.article__ctn {
+    display: grid;
+    gap: auto;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
 }
 
-.article__single h5 {}
+.article__single {
+    width: 320px;
+    padding: 25px;
+    background-color: var(--bg-color);
+    box-shadow: 2px 5px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-right: 15px;
+    box-sizing: border-box;
+}
 
-.article__single p {}
+.article__single a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.article__single a:hover {
+    color: var(--red-color);
+}
+
+.article__single img {
+    border-radius: 5px;
+    width: 280px;
+    margin-bottom: 15px;
+
+}
+
+.article__single h5 {
+    margin-bottom: 10px;
+    letter-spacing: .02em;
+    line-height: 1.2;
+}
+
+.article__single p {
+    font-size: .8rem;
+}
