@@ -1,7 +1,72 @@
 @import url(./reset.css);
 
+.header__nav__item a .current {
+    color: var(--red-color);
+    text-decoration: underline;
+}
+
 .aboutUs {}
 
 .container {}
 
 .breadcrumb {}
+
+.breadcrumb li {}
+
+.breadcrumb li a {}
+
+.banner {}
+
+.banner .banner__title {}
+
+.banner .banner__subtitle {}
+
+.content {}
+
+.content {}
+
+.content dl {}
+
+.content dl a {}
+
+.content dl a dt {}
+
+section {}
+
+.title__zh {}
+
+.title {}
+
+.concept__ctn {}
+
+.concept__ctn li {}
+
+.concept__ctn li img {}
+
+.concept__ctn li h6 {}
+
+.concept__ctn li p {}
+
+.contact__ctn {}
+
+.contact__ctn li h6 {}
+
+.contact__ctn li p {}
+
+.johnUs {}
+
+.johnUs__img {}
+
+.johnUs__text {}
+
+.benefit {}
+
+.meow__img {}
+
+.meow__text {}
+
+.meow__text h6 {}
+
+.meow__text ul {}
+
+.meow__text ul li {}
