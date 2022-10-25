@@ -389,13 +389,19 @@ section {
     background-color: var(--gray-color);
 }
 
+.article__wrapper {}
+
 .article__ctn {
     display: grid;
+    /* justify-content: center;
+    align-items: center; */
     gap: auto;
     grid-template-columns: repeat(4, minmax(0px, 1fr));
 }
 
 .article__single {
+    /* justify-content: center;
+    align-items: center; */
     width: 320px;
     padding: 25px;
     background-color: var(--bg-color);
