@@ -85,7 +85,7 @@ footer {
     letter-spacing: 2.1em;
 }
 
-.content {
+.container {
     background-image: url(../img/bg.svg);
     background-repeat: repeat-y;
 }
@@ -160,6 +160,8 @@ footer {
 
 .concept__ctn {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .concept__ctn li {
@@ -271,21 +273,30 @@ textarea {
 
 .johnUs {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .johnUs .johnUs__img {
     background-image: url(../img/component/resize/kristopher-roller-PC_lbSSxCZE-unsplash.jpg);
     width: 50%;
-    height: 300px;
+    line-height: 300px;
     display: block;
     object-fit: contain;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--bg-color);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
 }
 
 .johnUs__text {
     width: 50%;
-    padding: 25px 50px;
-    font-size: 2rem;
+    padding: 0 80px;
+    font-size: 1.5rem;
     display: block;
+    line-height: 1.5em;
+    text-align: center;
 }
 
 .reverse {
@@ -296,14 +307,31 @@ textarea {
     background-image: url(../img/component/resize/pexels-cadeau-maestro-1170412.jpg);
 }
 
+.reverse .johnUs__text {
+    font-size: 1.3rem;
+}
+
 .benefit {}
 
-.meow__img {}
 
-.meow__text {}
+.meow__img {
+    background-image: url(../img/component/pexels-pixabay-416160.jpg);
+    line-height: 50vh;
+    background-size: cover;
+    margin: 190px 100px 50px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--bg-color);
+    text-align: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+}
 
-.meow__text h6 {}
+.meow__text ul {
+    padding: 0 250px;
+    line-height: 1.8;
+    list-style: circle;
+}
 
-.meow__text ul {}
-
-.meow__text ul li {}
+.meow__text a {
+    text-decoration: none;
+}
