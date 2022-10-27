@@ -1,0 +1,230 @@
+.header__nav__item a .current {
+    color: var(--red-color);
+    text-decoration: underline;
+}
+
+footer {
+    background-image: url(/img/footerBanner.jpg);
+}
+
+.aboutUs {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    padding-top: 80px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.breadcrumb {
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 5px 10%;
+    display: flex;
+    background-color: var(--bg-color);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "";
+    margin: 0 10px;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-right: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+    transform: rotate(-45deg) translateY(-2px);
+}
+
+.breadcrumb li a {
+    font-size: .8rem;
+    text-decoration: none;
+    color: var(--font-color);
+    line-height: 20px;
+}
+
+.breadcrumb li a:hover {
+    color: var(--red-color);
+}
+
+.banner {
+    background-image: url(../img/banner/pexels-icsa-1709003.png);
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .65);
+    letter-spacing: 0.1em;
+}
+
+.banner__title h1 {
+    padding-top: 200px;
+    text-align: center;
+    font-size: 8rem;
+    color: var(--bg-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.banner__title p {
+    text-align: center;
+}
+
+.banner__subtitle {
+    box-sizing: border-box;
+    background-color: var(--red-color);
+    font-weight: bold;
+    color: var(--bg-color);
+    letter-spacing: 1.41em;
+}
+
+.container {
+    background-image: url(../img/bg.svg);
+    background-repeat: repeat-y;
+}
+
+.course section {
+    width: 100%;
+    margin: 190px auto 190px;
+}
+
+.title__zh {
+    color: var(--red-color);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    letter-spacing: .2rem;
+    font-weight: 550;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.title span {
+    color: transparent;
+    font-size: 8rem;
+    font-weight: bold;
+    -webkit-text-stroke: 3px var(--red-color);
+    margin: 0 80px;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    display: block;
+    flex: 1 1 auto;
+    border-top: 1px solid var(--red-color);
+}
+
+.course__banner {
+    height: 40vh;
+    background-size: cover;
+    margin: 0 200px 100px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    filter: saturate(1);
+}
+
+.course__banner>span {
+    padding: 60px 0;
+    color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.course__banner span h6 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: .3rem;
+    margin-bottom: 25px;
+}
+
+.course__banner span p {
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.course__banner span a {
+    display: block;
+    width: 350px;
+    line-height: 38px;
+    box-sizing: border-box;
+    position: relative;
+    outline: 1px solid var(--bg-color);
+    text-decoration: none;
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.course__banner span a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--red-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    outline: 1px solid var(--red-color);
+}
+
+.course__banner span a:hover::before {
+    transform: scaleX(1);
+    border-bottom: 1px solid var(--red-color);
+}
+
+.course__banner span a span {
+    position: relative;
+    z-index: 2;
+}
+
+
+.course__banner span a:hover span {
+    color: var(--bg-color);
+}
+
+.eng__speak {
+    background-image: url(../img/course/eng/banner/clip/brooke-cagle--uHVRvDr7pg-unsplash.jpg);
+}
+
+.eng__kid {
+    background-image: url(../img/course/eng/banner/clip/cowomen-cKQkMFzXHAI-unsplash.jpg);
+}
+
+.eng__oral {
+    background-image: url(../img/course/eng/banner/clip/helena-lopes-UZe35tk5UoA-unsplash.jpg);
+}
+
+.eng__business {
+    background-image: url(../img/course/eng/banner/clip/mimi-thian-lp1AKIUV3yo-unsplash.jpg);
+}
+
+.sci__lab {
+    background-image: url(../img/course/sci/clip/pexels-edward-jenner-4033148.jpg);
+}
+
+.sci__magic {
+    background-image: url(../img/course/sci/clip/pexels-polina-tankilevitch-3735709.jpg);
+}
+
+.phy__new {
+    background-image: url(../img/course/phy/clip/dan-cristian-padure-h3kuhYUCE9A-unsplash.jpg);
+}
+
+.phy__king {
+    background-image: url(../img/course/phy/clip/roman-mager-5mZ_M06Fc9g-unsplash.jpg);
+}
