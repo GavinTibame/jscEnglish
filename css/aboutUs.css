@@ -273,9 +273,8 @@ textarea {
     display: flex;
 }
 
-/* 圖未edit */
 .johnUs .johnUs__img {
-    background-image: url(../img/component/kristopher-roller-PC_lbSSxCZE-unsplash.jpg);
+    background-image: url(../img/component/resize/kristopher-roller-PC_lbSSxCZE-unsplash.jpg);
     width: 50%;
     height: 300px;
     display: block;
@@ -287,6 +286,14 @@ textarea {
     padding: 25px 50px;
     font-size: 2rem;
     display: block;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.reverse .johnUs__img {
+    background-image: url(../img/component/resize/pexels-cadeau-maestro-1170412.jpg);
 }
 
 .benefit {}
