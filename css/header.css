@@ -93,7 +93,7 @@ body {
 
 .header__nav__item a:hover {
     color: var(--red-color);
-    text-decoration: underline;
+    border-bottom: 2px solid var(--red-color);
 }
 
 .header__nav__login {
