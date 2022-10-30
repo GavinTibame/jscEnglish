@@ -6,10 +6,288 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q & A</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/qna.css">
+    <style>
+        #qNA {
+            color: var(--red-color);
+            font-weight: bold;
+            font-size: 1.19rem;
+            border-bottom: 2px solid var(--red-color);
+        }
+    </style>
 </head>
 
 <body>
-
+    <div id="header"></div>
+    <main class="qna">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="../homepage/index.html">首頁</a></li>
+                <li><a href="./qNA.html">常見問題</a></li>
+            </ul>
+            <div class="banner">
+                <div class="banner__title">
+                    <h1>常見問題</h1>
+                    <p>
+                        <span class="banner__subtitle">以下集合各式常見問題，歡迎查閱</span>
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <dl>
+                    <a href="#">
+                        <dd><i class="fa-solid fa-chalkboard-user"></i></dd>
+                        <dt><span>課程相關</span></dt>
+                    </a>
+                    <a href="#">
+                        <dd><i class="fa-regular fa-credit-card"></i></dd>
+                        <dt><span>報名與繳費</span></dt>
+                    </a>
+                    <a href="#">
+                        <dd><i class="fa-solid fa-user-tie"></i></dd>
+                        <dt><span>講師相關</span></dt>
+                    </a>
+                </dl>
+                <section class="qna__ctn">
+                    <section class="course">
+                        <h2>課程相關問題</h2>
+                        <div class="qna__col">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="courseQ1" class="check__ques">
+                                    <label for="courseQ1" class="question">
+                                        <h3>上課地點在哪裡？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>於
+                                                    <a href="https://frontend.tibame.com/login?error=l">JSC線上學習平台</a>
+                                                    與講師一起參與課程，不受任何地點限制。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="courseQ2" class="check__ques">
+                                    <label for="courseQ2" class="question">
+                                        <h3>我應該向一名講師學習還是向多名講師學習？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>我們理解只想和你最喜歡的講師一起上課的感覺。</p>
+                                                <p>「我們相處得很好，他的英語很容易理解，他也理解我。」</p>
+                                                <p>但要小心，如果你只從一個最喜歡的講師學習，你會一直用同樣的口音、詞彙和語速學習，這會是一個非常有限的組合。</p>
+                                                <p>如果這樣做，未來你將在海外開展業務，而當你嘗試與當地人合作時，你將無法應對。</p>
+                                                <p>「那我應該向多少講師學習？」</p>
+                                                <p>如果你是剛開始學習英語的 “初學者” ，最好向少數講師學習。</p>
+                                                <p>當你習慣了並希望接受更多挑戰時，建議向更多講師學習。</p>
+                                                <p>當你接近高級水平時，請嘗試向盡可能多的講師學習。</p>
+                                                <p>然後，你將接觸到許多口音、單詞和短語，熟悉不同人的語速，並了解每位講師的不同體驗。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="courseQ3" class="check__ques">
+                                    <label for="courseQ3" class="question">
+                                        <h3>如何聯繫講師？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>無論是從沒購買過的講師，還是已購買過的講師，JSC Learning都提供直接聯繫講師的方式。</p>
+                                                <p>讓你在購課前後，都能夠跟講師溝通，讓講師可以了解你的學習需要。甚至在預約課程時遇到困難，都可以先跟講師溝通。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="courseQ4" class="check__ques">
+                                    <label for="courseQ4" class="question">
+                                        <h3>可以停止使用JSC Learning的服務嗎？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>可以的，有關程序請至少在續訂日前 2 天進行。</p>
+                                                <p>取消時會顯示調查問卷頁面，再請回答並按照說明完成程序。</p>
+                                                <p>如果你停止使用JSC Learning，將停止付款學費、一切由JSC Learning服務和社群參與。</p>
+                                                <p>此外，我們也將刪除你的帳戶。因此，你將無法查看停止使用前JSC Learning的一切記錄。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="courseQ5" class="check__ques">
+                                    <label for="courseQ5" class="question">
+                                        <h3>推薦什麼樣的週期來學習？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>我們建議你通過“在線課程”和“自學”增進英語和溝通技巧，然後在兩者間隔中以“實戰操作”進行練習。</p>
+                                                <p>對於自學，除了備課和復習外，與“學伴”一起學習是有效率的進步方式。</p>
+                                                <p>課程結束後，我們的講師會給你反饋，你所學的單詞和短語將記錄在JSC Learning中。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="payment">
+                        <h2>報名與繳費</h2>
+                        <div class="qna__col">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="paymentQ1" class="check__ques">
+                                    <label for="paymentQ1" class="question">
+                                        <h3>有提供分期付款嗎？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>我們有提供無息分期付款。</p>
+                                                <p>每一門課程提供的分期數不同，可查閱各講師課程報名頁面。</p>
+                                                <p>另二十小時以上課程可分三期、六期、 十期和十二期。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="paymentQ2" class="check__ques">
+                                    <label for="paymentQ2" class="question">
+                                        <h3>我可以將付款方式從PayPal更改為銀行賬戶轉賬嗎？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>你可以在你的 PayPal 帳戶中更改它。</p>
+                                                <ul>
+                                                    <li>1. Login PayPal https://www.paypal.com/jp/home</li>
+                                                    <li>2. 點擊屏幕右上角的“齒輪”</li>
+                                                    <li>3. 從屏幕頂部的菜單中點擊“付款”</li>
+                                                    <li>4. "管理自動付款”，搜索JSC Learning並更改付款方式。</li>
+                                                </ul>
+                                                <small>Paypal可能需要大約 1 ~ 4 個工作天調整。如有任何問題，請聯繫Paypal。</small>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="paymentQ3" class="check__ques">
+                                    <label for="paymentQ3" class="question">
+                                        <h3>可以開收據或發票嗎？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>課程將合法開立免稅發票，並於完課後提供。</p>
+                                                <p>若有報帳需求，請於報名時備註公司名稱及統一編號。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="paymentQ4" class="check__ques">
+                                    <label for="paymentQ4" class="question">
+                                        <h3>如果取消課堂，可以退款嗎？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>若你因突發狀況導致無法繼續上課，或因不適應教師教課方式而打算停止學習，你可以先取消已預約之課程。</p>
+                                                <p>若在課程開始 12 小時以前取消課時，課程將會回到未預約之課堂數中，你可以選擇 重新預約 或是 申請退課。</p>
+                                                <p>若是在 12 小時內取消，請你先告知你的教師無法準時出席，再來你必須等待至課時開始後再點選「回報問題」，
+                                                    並向教師請求重新預約/退費。（退費金額將以 JC 幣的形式退還給你。）</p>
+                                                <p>＊若因為教師因素希望辦理退款，請你<a
+                                                        href="#">聯繫我們</a>說明原因，並附上相關資訊（對話截圖等），讓客服人員能用最快的速度為你處理！</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="teacher">
+                        <h2>講師相關</h2>
+                        <div class="qna__col">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="teacherQ1" class="check__ques">
+                                    <label for="teacherQ1" class="question">
+                                        <h3>講師如何更改已預約的課程時間？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>您的課程無法透過系統自行取消，講師端會顯示為"錯過此課程"。請您與您的學生發送消息說明您的情況並溝通解決辦法，再等到課程時間開始後才可點選『回報問題』。點選回報問題後請簡短的寫下與學生協調一個適當的處理方式
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="teacherQ2" class="check__ques">
+                                    <label for="teacherQ2" class="question">
+                                        <h3>如何提領薪資？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>當設定好您的收帳方式後，下一步就可以提領您的薪資。</p>
+                                                <p>JSC Learning 在每月 5 號會結算講師上一個月的教學收入，並自動轉換算 JC 幣( 1 JC 幣 ＝ 1
+                                                    美元)，轉帳至講師的帳號。</p>
+                                                <p>隨著提領金額上升，匯款手續費會因而下降，所以講師可以累積到一定水平後，再一次性提領，以節省手續費。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="teacherQ3" class="check__ques">
+                                    <label for="teacherQ3" class="question">
+                                        <h3>如何設定客製化課程給學生？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>在講師常用功能區設定私人課程專案後，按下“已完成”進入下一步，再將課程報價訊息發送給學生。</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="teacherQ4" class="check__ques">
+                                    <label for="teacherQ4" class="question">
+                                        <h3>如何銷售更多的課程？</h3>
+                                        <div class="answer__ctn">
+                                            <div class="answer">
+                                                <p>若您的開課時段較少，這會影響到您獲得的派單量，以及學生的購課意願。</p>
+                                                <p>大多學生希望能彈性預約自己想要的時段，並穩定上課。如果教師開放的時段過少，將影響學生購課的意願</p>
+                                                <span>⭐理想的開課時數⭐</span>
+                                                <p>每週大於25小時</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    </input>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script>
+        $(() => {
+            $("#header").load("/html/header.html");
+            $("#footer").load("/html/footer.html")
+        });
+    </script>
 </body>
 
 </html>
