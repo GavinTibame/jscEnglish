@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../css/lecturer.css">
+    <link rel="stylesheet" href="../../css/article.css">
     <style>
         #article {
             color: var(--red-color);
@@ -34,152 +34,322 @@
             <div class="banner">
                 <div class="banner__title">
                     <h1>技術文章</h1>
-                    <p><span class="banner__subtitle">站在巨人的肩膀上，看得比較遠 –– 牛頓</span></p>
+                    <p><span class="banner__subtitle">站在巨人的肩膀上看世界 – 牛頓</span></p>
                 </div>
             </div>
             <div class="content">
                 <section class="wrapper">
-                    <div class="list__subscribe">
-                        <div class="list__ctn">
-                            <div class="list__post">
-                                <a href="#">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a><a href="">
-                                    <span class="inner"><img src="" alt="">
-                                        <span class="text">
-                                            <h6 class="subject"></h6>
-                                            <span></span>
-                                            <p></p>
-                                            <p></p>
-                                        </span>
-                                    </span>
-                                </a>
+                    <div class="subscribe">
+                        <h5>訂閱文章</h5>
+                        <button class="downSize">_</button>
+                        <form method="post">
+                            <div class="form__row">
+                                <input type="text" placeholder="*姓名">
+                                <input type="email" placeholder="*Email" required>
+                                <div>
+                                    <button class="submit" type="submit" name="subscribe">
+                                        訂閱我們
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                    </div>
+                    <div class="list__post">
+                        <a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-helena-lopes-708440.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">最常搞錯的feedback用法：別再叫人「Please feedback」了</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>JSC課程顧問團隊</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-cottonbro-4114710.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">台灣本土最強瀉藥？科學實驗入門國小專班對「早餐店大冰奶」的烙賽指數，進行了一連串人體實驗</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>宋可其</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-zhu-peng-1271696.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">用Georg Jensen純銀餐具裝超市馬鈴薯沙拉，丹麥人請吃飯這樣展現他們的「逼格」</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>甘盈君</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-pavlos-lee-13937338.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">台北市「熱島」如何退燒？成大提出首個經科學實證的都市降溫指標</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>JSC課程顧問團隊</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-min-an-853168.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">後疫情時代下的英國背包旅行是什麼模樣？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>林聖仁</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-saya-kimura-401107.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">整天開燈很吃電！用省電燈泡會比其他燈泡省電嗎？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>傅正雅</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-moose-photos-1036641.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">已讀不回超沒禮貌？也許不回應已經是對方最大的溫柔</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>韓軒豪</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-christina-morillo-1181233.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">如果未來可吃自己的肉、若是可以指控警察人臉辨識侵權？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>JSC課程顧問團隊</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-karolina-grabowska-4467633.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">輸出符合自己同溫層美感的問安圖，對長輩也是一種審美溝通</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>JSC課程顧問團隊</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-jimmy-chan-1038191.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">《把每一天過成一趟旅行》：什麼是旅途中最實用的一句話？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>樂俊彥</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-cottonbro-4778622.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">物理學新手村專班︰不只玩IG和抖音，還會組團解決社會問題！</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>JSC課程顧問團隊</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img
+                                    src="../../img/article/resize/pexels-agung-pandit-wiguna-1792734.jpg" alt="">
+                                <div class="text">
+                                    <h6 class="subject">選擇小孩喜歡喝的調味乳，你有注意過乳原料是「生乳」或「奶粉」嗎？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>張隆坤</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-arjiv-exports-5362404.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">碳元素加壓會變成鑽石，那鑽石再加壓會變成什麼？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>楊政峰</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-karolina-grabowska-4996976.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">許多物理定律是可逆的，但為什麼時間只有一個方向？</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>陳順宜</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a><a href="#">
+                            <div class="inner"><img src="../../img/article/resize/pexels-salamatu-gwadah-3743389.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h6 class="subject">加熱啟動「梅納反應」，賦予食物有層次感的口味與令人愉悅的香氣</h6>
+                                    <ul class="author">
+                                        <li><span>By</span></li>
+                                        <li>
+                                            <p>柳東霞</p>
+                                        </li>
+                                        <li>
+                                            <p>10月 10 2022</p>
+                                        </li>
+                                        <li>
+                                            <p>技術文章</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tagPage__list">
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                        </ul>
+                        <span>......</span>
+                        <a href="#">18</a>
+                        <a href="#">></a>
                     </div>
                 </section>
             </div>
