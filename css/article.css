@@ -112,10 +112,12 @@ footer {
     box-shadow: 0 1rem 1.1rem 0 rgba(0, 0, 0, .3);
     position: relative;
     height: 100%;
+    border-radius: .3rem;
 }
 
 .list__post .inner img {
-    width: 22rem;
+    width: 100%;
+    border-radius: .3rem;
 }
 
 .list__post .inner .text {}
