@@ -127,7 +127,7 @@ footer {
 
 .qna .qna__ctn section {
     padding: 2.5rem;
-    width: auto;
+    width: 100%;
     background-color: var(--gray-tgh-color);
     border-radius: .5rem;
     box-shadow: 0 1rem 1.1rem 0 rgba(0, 0, 0, .3);
@@ -140,10 +140,68 @@ footer {
     font-size: 3rem;
     color: var(--red-color);
     border-bottom: 3px solid var(--bg-color);
+    font-weight: bold;
 }
 
 .qna__ctn .qna__col {
     display: grid;
     grid-template-columns: repeat(2, minmax(0px, 1fr));
     gap: 3rem;
+}
+
+.qna__ctn .qna__col input {
+    display: none;
+}
+
+.qna__ctn .qna__col h3::before {
+    content: "．";
+    margin-right: .5rem;
+    font-size: 1.5rem;
+}
+
+.qna__ctn .qna__col h3 {
+    padding: .8rem 1.2rem .8rem .25rem;
+    border-bottom: 2px solid var(--bg-color);
+    cursor: pointer;
+    /* margin-bottom: .5rem; */
+    line-height: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+}
+
+.qna__ctn .qna__col h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 43%;
+    text-align: right;
+    margin: 0 10px;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-right: 2px solid var(--red-color);
+    border-bottom: 2px solid var(--red-color);
+    transition: all .3s;
+    transform: rotate(45deg) translateY(-2px);
+}
+
+.qna__ctn .qna__col .answer__ctn {
+    display: none;
+    padding: 1.3rem 1.2rem .8rem 2.3rem;
+    border-bottom: 2px solid var(--bg-color);
+    margin-bottom: .5rem;
+    line-height: 1.5rem;
+    background-color: var(--gray-tgh-color);
+}
+
+.active {
+    display: block
+}
+
+.qna__col .answer__ctn a {
+    color: var(--red-color);
+    font-weight: 600;
 }
