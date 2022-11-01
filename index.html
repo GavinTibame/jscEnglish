@@ -13,8 +13,6 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/homepage.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
@@ -362,12 +360,15 @@
     <div id="footer"></div>
     <script>
         const layoutPath = "https://gavintibame.github.io/jscEnglish/html/"
+        // $(() => {
+        //     $("#header").load(`${layoutPath}header.html`);
+        //     $("#footer").load(`${layoutPath}footer.html`);
+        // });
         $(() => {
-            $("#header").load(`${layoutPath}header.html`);
-            $("#footer").load(`${layoutPath}footer.html`);
+            $("#header").load(`/html/header.html`);
+            $("#footer").load(`/html/footer.html`);
         });
     </script>
-    <script src="./js/index.js"></script>
 </body>
 
 </html>
