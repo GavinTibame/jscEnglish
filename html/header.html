@@ -8,21 +8,76 @@
     <title>Header</title>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="../../css/header.css">
     <!-- <script>$(() => { $(".class").click(() => { $(".class").slideToggle() }) })</script> -->
 </head>
 
 <body>
+    <dialog id="dialogLogin" class="dialog__login">
+        <ul>
+            <li class="btn__ctn">
+                <button id="fresh" onclick="ctnToggle()">註冊</button>
+                <button id="login" onclick="ctnToggle()" class="toggle">登入</button>
+            </li>
+            <li><input type="email" placeholder="*Email信箱" required></li>
+            <li><input id="usernameTypo" type="text" class="inactive" placeholder="*名字"></li>
+            <li><input type="password" placeholder="*密碼" required></li>
+            <li><input id="cfmPw" type="password" class="inactive" placeholder="密碼確認"></li>
+            <li><button class="btn__login">登入</button>
+                <button class="btn__register inactive">註冊</button>
+            </li>
+        </ul>
+    </dialog>
     <header class="header">
         <div class="header__wrapper">
-            <a href="/html/homepage/index.html" class="header__logo">
-                <img src="/img/logo/logoSVG.svg" alt="Logo.png"></a>
+            <a href="../../index.html" class="header__logo">
+                <img class="desktop" src="../../img/logo/logoSVG.svg" alt="Logo.png">
+                <img class="mobile" src="../../img/logo/logoOnlySVG.svg" alt="Logo.png">
+            </a>
             <div class="header__inner">
                 <nav class="header__nav">
                     <ul class="header__nav__menu">
-                        <li class="header__nav__item"><a id="aboutUs" href="/html/aboutUs/aboutUs.html">關於我們</a></li>
-                        <li class="header__nav__item"><a id="course" href="/html/course/course.html">專業課程</a></li>
-                        <li class="header__nav__item"><a id="lecturer" href="/html/lecturer/lecturer.html">講師陣容</a></li>
+                        <li class="header__nav__item"><a id="aboutUs" href="/html/aboutUs/aboutUs.html">關於我們</a> </li>
+                        <li class="header__nav__item nav__course">
+                            <a id="course" class="menu__course" href="/html/course/course.html">專業課程</a>
+                            <div class="menu__ctn">
+                                <div class="menu__inner">
+                                    <dl>
+                                        <dt>英語課程</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><a href="/html/course/course.html">英語會話課程</a></li>
+                                                <li><a href="/html/course/course.html">英語幼幼專班</a></li>
+                                                <li><a href="/html/course/course.html">英語口說課程</a></li>
+                                                <li><a href="/html/course/course.html">商業英語課程</a></li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>科學課程</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><a href="/html/course/course.html">科學實驗入門國小專班</a></li>
+                                                <li><a href="/html/course/course.html">魔法科學季度班</a></li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>物理課程</dt>
+                                        <dd>
+                                            <ul>
+                                                <li><a href="/html/course/course.html">物理學新手村專班</a></li>
+                                                <li><a href="/html/course/course.html">物理挑戰小霸王專班</a></li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav__item">
+                            <a id="lecturer" href="/html/lecturer/lecturer.html">講師陣容</a>
+
+                        </li>
                         <li class="header__nav__item"><a id="article" href="/html/article/article.html">技術文章</a></li>
                         <li class="header__nav__item"><a id="news" href="/html/news/news.html">最新消息</a></li>
                         <li class="header__nav__item"><a id="qNA" href="/html/qNA/qNA.html">常見問題</a></li>
@@ -33,6 +88,8 @@
             </div>
         </div>
     </header>
+
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

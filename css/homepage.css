@@ -42,7 +42,7 @@
     transform: translate(-50%, -50%);
 }
 
-/* .banner__bottom {
+/* .banner__bottom { scroll進度條
     width: 100%;
     display: block;
     position: absolute;
@@ -54,12 +54,12 @@
 
 .content {
     background-color: var(--bg-color);
-    background-image: url(../img/bg.svg);
+    background-image: url("../img/bg.svg");
     background-repeat: repeat-y;
     position: relative;
     z-index: 1;
     margin-top: 1px;
-    /* padding-top: 1px; */
+    /* padding-top: 1px; scroll進度條*/
     padding-bottom: 1px;
 }
 
@@ -69,15 +69,15 @@ section {
 }
 
 .homepage .hp__course {
-    margin: 640px 0 110px;
-    padding-top: 100px;
+    margin: 38rem 0 6rem;
+    padding-top: 8rem;
 }
 
 .title__zh {
     color: var(--red-color);
     text-align: center;
     font-size: 1.1rem;
-    margin-bottom: 25px;
+    margin-bottom: 1.8rem;
     letter-spacing: .2rem;
     font-weight: 550;
 }
@@ -86,7 +86,7 @@ section {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 5.8rem;
 }
 
 .title span {
@@ -94,7 +94,7 @@ section {
     font-size: 8rem;
     font-weight: bold;
     -webkit-text-stroke: 3px var(--red-color);
-    margin: 0 80px;
+    margin: 0 5rem;
 }
 
 .title::before,
@@ -106,19 +106,18 @@ section {
 }
 
 .course__wrapper {
-    /* min-width: 320px; */
     display: grid;
-    margin: 0 130px;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, 300px);
+    padding: 0 8rem;
+    grid-template-rows: repeat(3, minmax(0px, 1fr));
+    grid-template-columns: repeat(4, minmax(0px, 30rem));
 }
 
 .course__list {
     display: block;
-    width: 250px;
-    height: 160px;
+    width: 16rem;
+    height: 10rem;
     overflow: hidden;
-    margin: 0 auto 50px;
+    margin: 0 auto 3rem;
     box-sizing: border-box;
 }
 
@@ -159,7 +158,7 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 160px;
+    height: 10rem;
     position: relative;
     z-index: 2;
 }
@@ -168,7 +167,7 @@ section {
     font-size: 1.2rem;
     font-weight: bold;
     word-spacing: 0.7em;
-    margin-bottom: 6px;
+    margin-bottom: .3rem;
 }
 
 .course__list span h6 {
@@ -176,10 +175,10 @@ section {
 }
 
 .seeMore {
-    margin: 60px auto 190px;
+    margin: 3.8rem auto 12rem;
     display: block;
     max-width: 370px;
-    line-height: 50px;
+    line-height: 3rem;
     box-sizing: border-box;
     position: relative;
     outline: 1px solid var(--font-color);
@@ -187,6 +186,12 @@ section {
     color: var(--font-color);
     text-align: center;
     background-color: var(--bg-color);
+}
+
+.seeMore .btn__arrow {
+    position: absolute;
+    right: 3%;
+    top: 45%;
 }
 
 .seeMore span {
@@ -211,6 +216,8 @@ section {
 .seeMore:hover {
     color: var(--bg-color)
 }
+
+
 
 .seeMore:hover::before {
     transform: scaleX(1)
