@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../css/header.css">
-    <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/aboutUs.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
     <style>
         #aboutUs {
             color: var(--red-color);
@@ -30,8 +28,8 @@
     <main class="aboutUs">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="../homepage/index.html">首頁</a></li>
-                <li><a href="./aboutUs.html">關於我們</a></li>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="aboutUs.html">關於我們</a></li>
             </ul>
             <div class="banner">
                 <div class="banner__title">
@@ -62,7 +60,7 @@
                         <span>CONCEPT</span>
                     </h1>
                     <ul class="concept__ctn">
-                        <li><img src="../../img/DM/pexels-lukas-kloeppel-466685.jpg" alt=""></li>
+                        <li><img src="img/DM/pexels-lukas-kloeppel-466685.jpg" alt=""></li>
                         <li>
                             <div>
                                 <h6>越過語言鴻溝，<br>
@@ -181,8 +179,8 @@
         // TODO Live Server
 
         $(() => {
-            $("#header").load("/header.html");
-            $("#footer").load("/footer.html")
+            $("#header").load("header.html");
+            $("#footer").load("footer.html")
         });
     </script>
 </body>
