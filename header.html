@@ -14,19 +14,22 @@
 
 <body>
     <dialog id="dialogLogin" class="dialog__login">
-        <ul>
-            <li class="btn__ctn">
-                <button id="fresh" onclick="ctnToggle()">註冊</button>
-                <button id="login" onclick="ctnToggle()" class="toggle">登入</button>
-            </li>
-            <li><input type="email" placeholder="*Email信箱" required></li>
-            <li><input id="usernameTypo" type="text" class="inactive" placeholder="*名字"></li>
-            <li><input type="password" placeholder="*密碼" required></li>
-            <li><input id="cfmPw" type="password" class="inactive" placeholder="密碼確認"></li>
-            <li><button class="btn__login">登入</button>
-                <button class="btn__register inactive">註冊</button>
-            </li>
-        </ul>
+        <div class="dialog__ctn">
+            <ul>
+                <li class="btn__ctn">
+                    <button id="fresh" onclick="ctnToggle()">註冊</button>
+                    <button id="login" onclick="ctnToggle()" class="toggle">登入</button>
+                </li>
+                <li><input type="email" placeholder="*Email信箱" required></li>
+                <li><input id="usernameTypo" type="text" class="inactive" placeholder="*名字"></li>
+                <li><input type="password" placeholder="*密碼" required></li>
+                <li><input id="cfmPw" type="password" class="inactive" placeholder="密碼確認"></li>
+                <li><button class="btn__login">登入</button>
+                    <button class="btn__register inactive">註冊</button>
+                </li>
+            </ul>
+            <button id="closeDialog" class="btn__dialog">+</button>
+        </div>
     </dialog>
     <header class="header">
         <div class="header__wrapper">
@@ -86,7 +89,7 @@
                         <li class="header__nav__item"><a id="news" href="news.html">最新消息</a></li>
                         <li class="header__nav__item"><a id="qNA" href="qNA.html">常見問題</a></li>
                         <li class="header__nav__item"><button class="header__nav__login"
-                                href="#"><span>登入帳號</span></button></li>
+                                href="#"><span>登入</span></button></li>
                     </ul>
                 </nav>
             </div>

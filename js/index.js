@@ -14,6 +14,8 @@ login.addEventListener("click", () => {
 });
 dialogLogin.addEventListener('click', (e) => {
     const dialogWindow = dialogLogin.getBoundingClientRect();
+    console.log(`top${dialogWindow.top}`);
+    // 把登入頁的寬高弄跟註冊頁的一樣，再把數值設死
     let onDialog = (dialogWindow.top <= e.clientY && e.clientY <= dialogWindow.top + dialogWindow.height
         && dialogWindow.left <= e.clientX && e.clientX <= dialogWindow.left + dialogWindow.width);
     if (!onDialog) {
