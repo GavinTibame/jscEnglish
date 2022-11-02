@@ -448,5 +448,6 @@ section {
 }
 
 .article__single p {
-    font-size: .8rem;
+    font-size: .78rem;
+    color: var(--font1-color);
 }
