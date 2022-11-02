@@ -18,7 +18,88 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <div id="header">
+        <dialog id="dialogLogin" class="dialog__login">
+            <ul>
+                <li class="btn__ctn">
+                    <button id="fresh" onclick="ctnToggle()">註冊</button>
+                    <button id="login" onclick="ctnToggle()" class="toggle">登入</button>
+                </li>
+                <li><input type="email" placeholder="*Email信箱" required></li>
+                <li><input id="usernameTypo" type="text" class="inactive" placeholder="*名字"></li>
+                <li><input type="password" placeholder="*密碼" required></li>
+                <li><input id="cfmPw" type="password" class="inactive" placeholder="密碼確認"></li>
+                <li><button class="btn__login">登入</button>
+                    <button class="btn__register inactive">註冊</button>
+                </li>
+            </ul>
+        </dialog>
+        <header class="header">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo">
+                    <img class="desktop"
+                        src="https://raw.githubusercontent.com/GavinTibame/jscEnglish/5ffd6fe323dcb239f81fe76f64c127b4f08eac60/img/logo/logoSVG.svg"
+                        alt="Logo.png">
+                    <img class="mobile"
+                        src="https://raw.githubusercontent.com/GavinTibame/jscEnglish/9d31409294545f8c1c36067ac8921b9abb47707b/img/logo/logoOnlySVG.svg"
+                        alt="Logo.png">
+                </a>
+                <div class="header__inner">
+                    <nav class="header__nav">
+                        <ul class="header__nav__menu">
+                            <li class="header__nav__item"><a id="aboutUs" href="html/aboutUs/aboutUs.html">關於我們</a>
+                            </li>
+                            <li class="header__nav__item nav__course">
+                                <a id="course" class="menu__course" href="html/course/course.html">專業課程</a>
+                                <div class="menu__ctn">
+                                    <div class="menu__inner">
+                                        <dl>
+                                            <dt>英語課程</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="html/course/course.html">英語會話課程</a></li>
+                                                    <li><a href="html/course/course.html">英語幼幼專班</a></li>
+                                                    <li><a href="html/course/course.html">英語口說課程</a></li>
+                                                    <li><a href="html/course/course.html">商業英語課程</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>科學課程</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="html/course/course.html">科學實驗入門國小專班</a></li>
+                                                    <li><a href="html/course/course.html">魔法科學季度班</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>物理課程</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="html/course/course.html">物理學新手村專班</a></li>
+                                                    <li><a href="html/course/course.html">物理挑戰小霸王專班</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__nav__item">
+                                <a id="lecturer" href="html/lecturer/lecturer.html">講師陣容</a>
+
+                            </li>
+                            <li class="header__nav__item"><a id="article" href="html/article/article.html">技術文章</a></li>
+                            <li class="header__nav__item"><a id="news" href="html/news/news.html">最新消息</a></li>
+                            <li class="header__nav__item"><a id="qNA" href="html/qNA/qNA.html">常見問題</a></li>
+                            <li class="header__nav__item"><button class="header__nav__login"
+                                    href="#"><span>登入帳號</span></button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
     <main class="homepage">
         <div class="container">
             <div class="banner"><video src="video/mixkit-crowds-of-people-cross-a-street-junction-4401-medium.mp4"
@@ -358,18 +439,80 @@
             </div>
         </div>
     </main>
-    <div id="footer"></div>
-    <script>
-        const layoutPath = "https://gavintibame.github.io/jscEnglish/html/"
-        // $(() => {
-        //     $("#header").load(`${layoutPath}header.html`);
-        //     $("#footer").load(`${layoutPath}footer.html`);
-        // });
-        $(() => {
-            $("#header").load(`html/header.html`);
-            $("#footer").load(`html/footer.html`);
-        });
-    </script>
+    <div id="footer">
+        <footer>
+            <div class="footer__menu">
+                <div class="logo"><a href="/index.html"><img
+                            src="https://raw.githubusercontent.com/GavinTibame/jscEnglish/9d31409294545f8c1c36067ac8921b9abb47707b/img/logo/logoOnlySVG.svg"
+                            alt="logo.png"></a>
+                </div>
+                <dl class="about">
+                    <dt><a class="toggle" href="/html/aboutUs/aboutUs.html">關於我們</a></dt>
+                    <dd>
+                        <ul class="sub">
+                            <li><a class="toggle" href="#">辦學理念</a></li>
+                            <li><a class="toggle" href="#">聯絡我們</a></li>
+                            <li><a class="toggle" href="#">加入我們</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="course">
+                    <dt><a href="/html/course/course.html" class="toggle">專業課程</a></dt>
+                    <dd>
+                        <ul class="sub">
+                            <li><a href="#" class="toggle">英語課程</a></li>
+                            <li><a href="#" class="toggle">科學課程</a></li>
+                            <li><a href="#" class="toggle">物理課程</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="lecturer">
+                    <dt><a href="/html/lecturer/lecturer.html" class="toggle">講師陣容</a></dt>
+                    <dd>
+                        <ul class="sub">
+                            <li><a href="#" class="toggle">英文學科</a></li>
+                            <li><a href="#" class="toggle">理化學科</a></li>
+                            <li><a href="#" class="toggle">物理學科</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="blog">
+                    <dt><a href="#" class="toggle">部落客</a></dt>
+                    <dd>
+                        <ul class="sub">
+                            <li><a href="/html/article/article.html" class="toggle">技術文章</a></li>
+                            <li><a href="/html/news/news.html" class="toggle">最新消息</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="other">
+                    <dt><a href="/html/qNA/qNA.html" class="toggle">幫助與政策</a></dt>
+                    <dd>
+                        <ul class="sub">
+                            <li><a href="#" class="toggle">常見問題</a></li>
+                            <li><a href="#" class="toggle">隱私權政策</a></li>
+                            <li><a href="#" class="toggle">服務條款</a></li>
+                            <li class="footerContact">
+                                <p>JSC Learning</p>
+                                <p>Tel: 02-2222-2222</p>
+                            </li>
+                            <li>
+                                <ul class="follow">
+                                    <li><a href="#"><img src="/img/icon_fb.png" alt=""></a></li>
+                                    <li><a href="#"><img src="/img/icon_ig.png" alt=""></a></li>
+                                    <li><a href="#"><img src="/img/icon_tw.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div id="footer1" class="footer__footer">
+                <p>Copyright © 2022 JSC Learning Co.,Ltd. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
