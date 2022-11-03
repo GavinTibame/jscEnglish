@@ -8,12 +8,14 @@ const login = document.querySelector(".header__nav__login"),
     btnRegister = document.querySelector(".btn__register"),
     smallHr = document.getElementById("smallHr"),
     socialLogin = document.getElementById("socialLogin"),
-    closeDialog = document.getElementById("closeDialog");
+    closeDialog = document.getElementById("closeDialog"),
+    body = document.getElementById("body");
 
 // dialog 
 
 login.addEventListener("click", () => {
     dialogLogin.showModal();
+    body.classList.toggle("scrollLock");
 });
 dialogLogin.addEventListener('click', (e) => {
     const dialogWindow = dialogLogin.getBoundingClientRect();
@@ -21,10 +23,10 @@ dialogLogin.addEventListener('click', (e) => {
     let onDialog = (dialogWindow.top <= e.clientY && e.clientY <= dialogWindow.top + dialogWindow.height
         && dialogWindow.left <= e.clientX && e.clientX <= dialogWindow.left + dialogWindow.width);
     if (!onDialog) {
-        dialogLogin.close();
+        dialogLogin.close(); body.classList.toggle("scrollLock");
     }
 });
-closeDialog.addEventListener("click", () => { dialogLogin.close() })
+closeDialog.addEventListener("click", () => { dialogLogin.close(); body.classList.toggle("scrollLock"); });
 
 // .stop-scrolling {
 //     height: 100%;

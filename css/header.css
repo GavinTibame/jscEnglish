@@ -29,6 +29,10 @@ body {
     font-size: 16px;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .header {
     width: 100%;
     background-color: var(--bg-color);
@@ -373,4 +377,8 @@ dialog input {
 
 .inactive {
     display: none
+}
+
+.scrollLock {
+    overflow: hidden;
 }

@@ -42,6 +42,18 @@
     transform: translate(-50%, -50%);
 }
 
+.banner span {
+    position: fixed;
+    bottom: 54%;
+    z-index: 1;
+    font-size: 1.2rem;
+    letter-spacing: 1.2rem;
+    color: var(--gray-color);
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
 /* .banner__bottom { scroll進度條
     width: 100%;
     display: block;
@@ -448,6 +460,8 @@ section {
 }
 
 .article__single p {
-    font-size: .78rem;
+    font-size: .7rem;
+    display: block;
+    width: 100%;
     color: var(--font1-color);
 }
