@@ -79,7 +79,6 @@ body {
     .header .mobile {
         display: inline;
         text-align: start;
-        max-width: 100%;
     }
 
     .header__wrapper a img {
@@ -93,6 +92,8 @@ body {
     align-items: center;
     margin: 0 auto;
 }
+
+
 
 .header__nav__menu {
     display: flex;
@@ -139,6 +140,12 @@ body {
     transform: rotate(-135deg);
     margin-top: 3px;
     border-color: var(--red-color);
+}
+
+@media screen and (max-width:710px) {
+    .header__nav__menu li:not(:last-child) {
+        display: none;
+    }
 }
 
 .nav__course .menu__ctn {
