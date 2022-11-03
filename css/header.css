@@ -149,6 +149,7 @@ body {
     width: 100%;
     background-color: var(--bg-color);
     border-top: 1px solid var(--gray-color);
+    border-bottom: 1px solid var(--gray-color);
     transform-origin: center top;
     transition: .2s;
     /* transform: rotateX(90deg) scaleY(.7); */
@@ -291,6 +292,7 @@ dialog input {
     border-radius: 2px;
     display: block;
     font-size: 1rem;
+    letter-spacing: .05rem;
 }
 
 .btn__login,
@@ -302,18 +304,71 @@ dialog input {
     padding: .5rem 2rem;
     border-radius: 2px;
     font-size: 1rem;
+    letter-spacing: .1rem;
 }
 
 .btn__dialog {
     border: 0;
     background-color: transparent;
-    font-size: 2rem;
-    font-weight: 0;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
     color: var(--font1-color);
     position: absolute;
-    right: 0px;
-    top: -3px;
+    right: 3px;
+    top: -2px;
     transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.dialog__ctn ul small {
+    color: var(--gray-color);
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: .5rem .6rem;
+}
+
+.dialog__ctn small span {
+    margin: 0 1rem;
+}
+
+.dialog__ctn ul small::before,
+.dialog__ctn ul small::after {
+    content: "";
+    display: block;
+    flex: 1 1 auto;
+    border-top: 1px solid var(--gray-color);
+}
+
+.social__ctn a {
+    display: block;
+    width: 100%;
+    /* margin-bottom: 1.2rem; */
+    padding: .5rem .6rem;
+    border: 1px solid var(--gray-color);
+    font-size: .8rem;
+    border-radius: 3px;
+    letter-spacing: .05rem;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.social__ctn a:hover {
+    border-color: var(--font1-color);
+}
+
+.social__btn {
+    display: flex;
+    align-items: center;
+}
+
+.social__ctn .social__btn img {
+    width: 16px;
+    text-align: start;
+}
+
+.social__ctn .social__btn span {
+    margin: 0 auto;
 }
 
 .inactive {

@@ -37,7 +37,7 @@ footer dt {
 
 .about {}
 
-.toggle:hover {
+footer .toggle:hover {
     text-decoration: underline;
 }
 
