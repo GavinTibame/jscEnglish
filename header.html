@@ -17,8 +17,8 @@
         <div class="dialog__ctn">
             <ul>
                 <li class="btn__ctn">
-                    <button id="fresh" onclick="ctnToggle()">註冊</button>
-                    <button id="login" onclick="ctnToggle()" class="toggle">登入</button>
+                    <button id="fresh" onclick="freshActive()">註冊</button>
+                    <button id="login" onclick="freshInactive()" class="toggle">登入</button>
                 </li>
                 <li><input type="email" placeholder="*Email信箱" required></li>
                 <li><input id="usernameTypo" type="text" class="inactive" placeholder="*名字"></li>
@@ -33,7 +33,7 @@
                     </small>
                 </div>
                 <li id="socialLogin" class="social__ctn">
-                    <a href="https://tidycal.com/auth/google">
+                    <a href="https://google.com">
                         <div class="social__btn">
                             <img src="img/component/btn/integration-logo-google.png" alt="">
                             <span>Login with Google</span>
@@ -108,8 +108,6 @@
             </div>
         </div>
     </header>
-
-    <script src="js/index.js"></script>
 </body>
 
 </html>

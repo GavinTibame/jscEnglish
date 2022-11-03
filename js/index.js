@@ -9,39 +9,57 @@ const login = document.querySelector(".header__nav__login"),
     smallHr = document.getElementById("smallHr"),
     socialLogin = document.getElementById("socialLogin"),
     closeDialog = document.getElementById("closeDialog"),
-    body = document.getElementById("body");
+    body = document.getElementById("body"),
+    sloganClose = document.getElementById("sloganClose"),
+    videoSlogan = document.getElementById("videoSlogan")
+    ;
 
 // dialog 
 
 login.addEventListener("click", () => {
     dialogLogin.showModal();
-    body.classList.toggle("scrollLock");
+    body.classList.add("scrollLock");
 });
 dialogLogin.addEventListener('click', (e) => {
     const dialogWindow = dialogLogin.getBoundingClientRect();
-    console.log(`top${dialogWindow.top}`);
-    let onDialog = (dialogWindow.top <= e.clientY && e.clientY <= dialogWindow.top + dialogWindow.height
-        && dialogWindow.left <= e.clientX && e.clientX <= dialogWindow.left + dialogWindow.width);
+    let onDialog = (dialogWindow.top <= e.clientY &&
+        e.clientY <= dialogWindow.top + dialogWindow.height &&
+        dialogWindow.left <= e.clientX &&
+        e.clientX <= dialogWindow.left + dialogWindow.width);
     if (!onDialog) {
-        dialogLogin.close(); body.classList.toggle("scrollLock");
+        dialogLogin.close(); body.classList.remove("scrollLock");
     }
 });
-closeDialog.addEventListener("click", () => { dialogLogin.close(); body.classList.toggle("scrollLock"); });
+closeDialog.addEventListener("click", () => { dialogLogin.close(); body.classList.remove("scrollLock"); });
 
-// .stop-scrolling {
-//     height: 100%;
-//     overflow: hidden;
-//   }
-
-// login / fresh
-
-function ctnToggle() {
-    loginBtn.classList.toggle("toggle");
-    fresh.classList.toggle("toggle");
-    usernameTypo.classList.toggle("inactive");
-    cfmPw.classList.toggle("inactive");
-    btnLogin.classList.toggle("inactive");
-    btnRegister.classList.toggle("inactive");
-    smallHr.classList.toggle("inactive");
-    socialLogin.classList.toggle("inactive");
+function freshActive() {
+    loginBtn.classList.remove("toggle");
+    fresh.classList.add("toggle");
+    usernameTypo.classList.remove("inactive");
+    cfmPw.classList.remove("inactive");
+    btnLogin.classList.add("inactive");
+    btnRegister.classList.remove("inactive");
+    smallHr.classList.add("inactive");
+    socialLogin.classList.add("inactive");
 };
+
+function freshInactive() {
+    loginBtn.classList.add("toggle");
+    fresh.classList.remove("toggle");
+    usernameTypo.classList.add("inactive");
+    cfmPw.classList.add("inactive");
+    btnLogin.classList.remove("inactive");
+    btnRegister.classList.add("inactive");
+    smallHr.classList.remove("inactive");
+    socialLogin.classList.remove("inactive");
+};
+// homePage video slogan 
+
+this.addEventListener("scroll", () => {
+    let scrollDetector = this.scrollY;
+    if (scrollDetector < 700) {
+        videoSlogan.classList.remove("display__none");
+    } else {
+        videoSlogan.classList.add("display__none");
+    }
+})

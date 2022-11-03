@@ -54,6 +54,10 @@
     display: block;
 }
 
+.display__none {
+    display: none !important;
+}
+
 /* .banner__bottom { scroll進度條
     width: 100%;
     display: block;
