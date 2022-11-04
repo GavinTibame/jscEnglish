@@ -1,4 +1,7 @@
-const login = document.querySelector(".header__nav__login"),
+const rwdMenu = document.getElementById("rwdMenu"),
+    menuClose = document.getElementById("menuClose"),
+    menuOpen = document.getElementById("menuOpen"),
+    login = document.querySelector(".header__nav__login"),
     dialogLogin = document.getElementById("dialogLogin"),
     fresh = document.getElementById("fresh"),
     loginBtn = document.getElementById("login"),
@@ -13,6 +16,12 @@ const login = document.querySelector(".header__nav__login"),
     sloganClose = document.getElementById("sloganClose"),
     videoSlogan = document.getElementById("videoSlogan")
     ;
+
+// rwd menu
+
+rwdMenu.addEventListener("click", () => {
+
+})
 
 // dialog 
 
@@ -30,7 +39,9 @@ dialogLogin.addEventListener('click', (e) => {
         dialogLogin.close(); body.classList.remove("scrollLock");
     }
 });
-closeDialog.addEventListener("click", () => { dialogLogin.close(); body.classList.remove("scrollLock"); });
+closeDialog.addEventListener("click", () => {
+    dialogLogin.close(); body.classList.remove("scrollLock");
+});
 
 function freshActive() {
     loginBtn.classList.remove("toggle");
@@ -53,6 +64,7 @@ function freshInactive() {
     smallHr.classList.remove("inactive");
     socialLogin.classList.remove("inactive");
 };
+
 // homePage video slogan 
 
 this.addEventListener("scroll", () => {
@@ -62,4 +74,4 @@ this.addEventListener("scroll", () => {
     } else {
         videoSlogan.classList.add("display__none");
     }
-})
+});

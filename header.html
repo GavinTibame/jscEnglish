@@ -56,11 +56,16 @@
             </a>
             <div class="header__inner">
                 <nav class="header__nav">
-                    <ul class="header__nav__menu">
+                    <div id="rwdMenu" class="menu__rwd">
+                        <img style="display: none" class="display__none" id="menuClose"
+                            src="img/component/btn/icon_close.svg" alt="">
+                        <img id="menuOpen" src="img/component/btn/icon_menu.svg" alt="">
+                    </div>
+                    <ul class="header__nav__menu menu__rwd__open">
                         <li class="header__nav__item"><a id="aboutUs" href="aboutUs.html">關於我們</a> </li>
                         <li class="header__nav__item nav__course">
                             <a id="course" class="menu__course" href="course.html">專業課程</a>
-                            <div class="menu__ctn">
+                            <div id="subMenu" class="menu__ctn">
                                 <div class="menu__inner">
                                     <dl>
                                         <dt>英語課程</dt>
@@ -101,10 +106,12 @@
                         <li class="header__nav__item"><a id="article" href="article.html">技術文章</a></li>
                         <li class="header__nav__item"><a id="news" href="news.html">最新消息</a></li>
                         <li class="header__nav__item"><a id="qNA" href="qNA.html">常見問題</a></li>
-                        <li class="header__nav__item"><button class="header__nav__login"
-                                href="#"><span>登入</span></button></li>
+                        <li class="header__nav__item">
+
+                        </li>
                     </ul>
                 </nav>
+                <button class="header__nav__login" href="#"><span>登入</span></button>
             </div>
         </div>
     </header>
