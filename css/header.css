@@ -278,17 +278,36 @@ body {
     .menu__inner dl dt {
         color: var(--font1-color);
         opacity: .5;
-        padding-right: 1.8rem;
+        padding-right: 2.8rem;
+    }
+
+    .menu__inner dl dd {
+        width: 70%;
     }
 
     .menu__ctn .menu__inner ul {
         margin: 0;
     }
 
-    .menu__ctn .menu__inner ul:not(:last-child) {}
+    .menu__ctn .menu__inner ul:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 
     .menu__ctn .menu__inner li {
         margin: 0;
+    }
+
+    .menu__ctn .menu__inner li:not(:last-child) {
+        padding-bottom: .4rem;
+    }
+
+    .menu__inner li a {
+        width: 100%;
+        display: block;
+    }
+
+    .menu__inner li a:hover {
+        border: 0;
     }
 }
 
