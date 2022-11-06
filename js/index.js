@@ -1,6 +1,9 @@
 const rwdMenu = document.getElementById("rwdMenu"),
     menuClose = document.getElementById("menuClose"),
     menuOpen = document.getElementById("menuOpen"),
+    rwdNav = document.querySelector(".menu__rwd__open"),
+    course = document.getElementById("course"),
+    subMenu = document.getElementById("subMenu"),
     login = document.querySelector(".header__nav__login"),
     dialogLogin = document.getElementById("dialogLogin"),
     fresh = document.getElementById("fresh"),
@@ -20,8 +23,13 @@ const rwdMenu = document.getElementById("rwdMenu"),
 // rwd menu
 
 rwdMenu.addEventListener("click", () => {
-
-})
+    menuClose.classList.toggle("display__none");
+    menuOpen.classList.toggle("display__none");
+    rwdNav.classList.toggle("menu__rwd__show");
+});
+course.addEventListener("click", () => {
+    subMenu.classList.toggle("rwd__menu__position");
+});
 
 // dialog 
 
@@ -66,10 +74,10 @@ function freshInactive() {
 };
 
 // homePage video slogan 
-
+const videoSloganTop = videoSlogan.offsetTop;
 this.addEventListener("scroll", () => {
     let scrollDetector = this.scrollY;
-    if (scrollDetector < 700) {
+    if (scrollDetector < videoSloganTop) {
         videoSlogan.classList.remove("display__none");
     } else {
         videoSlogan.classList.add("display__none");

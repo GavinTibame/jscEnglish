@@ -1,7 +1,7 @@
 footer {
     /* background-image: url(/img/footerBanner.jpg); */
     width: 100%;
-    height: 680px;
+    height: 100%;
     margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,27 +21,19 @@ footer {
     flex-grow: 1;
 }
 
-.logo {}
-
 .logo a img {
     width: 150px;
     box-shadow: unset;
 }
-
-dl {}
 
 footer dt {
     margin-bottom: 40px;
     font-size: 1.1rem;
 }
 
-.about {}
-
 footer .toggle:hover {
     text-decoration: underline;
 }
-
-.sub {}
 
 footer li {
     margin-bottom: 30px;
@@ -51,14 +43,6 @@ footer a {
     color: var(--bg-color);
     text-decoration: none;
 }
-
-.course {}
-
-.lecturer {}
-
-.blog {}
-
-.other {}
 
 .footerContact {
     margin: 80px 0 0;
@@ -77,7 +61,6 @@ footer a {
 .follow img {
     width: 30px;
     margin: 0;
-
 }
 
 .footer__footer {
@@ -88,5 +71,61 @@ footer a {
 
 .footer__footer p {
     line-height: 80px;
+    font-size: .8rem;
     text-align: center;
+}
+
+@media screen and (max-width:735px) {
+    .footer__menu {
+        padding: 100px 20px 120px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo a img {
+        margin-bottom: 50px
+    }
+
+    .footer__menu dl {
+        width: 100%;
+    }
+
+    .footer__menu dl {
+        border-top: 1px solid var(--bg-color);
+        padding-bottom: 1rem
+    }
+
+    footer dl dt {
+        margin: 0;
+    }
+
+    footer dt a {
+        font-weight: bold;
+        padding: 2rem 0 1rem 3.8rem;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    footer li {
+        margin: 0
+    }
+
+    footer dd a {
+        padding: 1rem 0 1rem 6.8rem;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .footerContact {
+        margin-top: 1rem;
+        border-top: 1px solid var(--bg-color);
+        padding: 80px 0 0 1rem;
+        font-size: .8rem;
+    }
+
+    .follow a {
+        padding: 0 0 0 1rem;
+    }
 }
