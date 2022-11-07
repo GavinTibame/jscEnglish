@@ -48,7 +48,8 @@ dialogLogin.addEventListener('click', (e) => {
     }
 });
 closeDialog.addEventListener("click", () => {
-    dialogLogin.close(); body.classList.remove("scrollLock");
+    dialogLogin.close();
+    body.classList.remove("scrollLock");
 });
 
 function freshActive() {

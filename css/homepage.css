@@ -318,7 +318,7 @@ section {
 
 @media screen and (max-width:770px) {
     .seeMore {
-        max-width: calc(100vw - 150px)
+        max-width: calc(100vw - 100px)
     }
 }
 
@@ -335,7 +335,7 @@ section {
     padding: 2.3rem;
     border: 1px solid var(--gray-color);
     background-color: var(--bg-color);
-    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.38);
     border-radius: 3px;
 }
 
@@ -390,7 +390,50 @@ section {
     margin: 1rem 0;
 }
 
-.profile__single .intro h6 {}
+@media screen and (max-width:1200px) {
+    .profile__ctn {
+        grid-template-columns: repeat(1, minmax(0px, 1fr))
+    }
+}
+
+@media screen and (max-width:770px) {
+    .profile__ctn {
+        padding: 0
+    }
+
+    .profile__icon {
+        margin-bottom: 1rem;
+    }
+
+    .profile__single .profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile__single .profile .social {
+        flex-wrap: wrap;
+    }
+
+    .intro .otherCourse__btn {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .profile__inner {
+        margin: 0;
+    }
+
+    .profile__single .profile__icon img {
+        width: 6rem
+    }
+
+    .profile__single .intro {
+        font-size: .8rem;
+    }
+}
 
 .intro .otherCourse {
     width: 100%;
@@ -444,8 +487,6 @@ section {
     overflow: hidden;
 }
 
-.feedback__group li {}
-
 .feedback {
     width: 18.75rem;
     padding: 20px 15px;
@@ -491,12 +532,17 @@ section {
     background-color: var(--gray-color);
 }
 
-.article__wrapper {}
+@media screen and (max-width:1200px) {
+    .feedback__btn {
+        width: .5rem;
+        height: .7rem;
+    }
+}
 
 .article__ctn {
     display: grid;
     padding: 0 3rem;
-    gap: auto;
+    gap: 2rem 1rem;
     grid-template-columns: repeat(4, minmax(0px, 1fr));
 }
 
@@ -542,3 +588,29 @@ section {
     width: 100%;
     color: var(--font1-color);
 }
+
+@media screen and (max-width:1200px) {
+    .article__ctn {
+        display: flex;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .article__ctn {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        grid-template-rows: repeat(1, minmax(0px, 1fr));
+        padding-bottom: 1rem
+    }
+
+    .article__single img {
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width:770px) {
+    .article__ctn {
+        grid-template-columns: repeat(1, minmax(0px, 1fr));
+    }
+} */
