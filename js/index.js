@@ -17,7 +17,8 @@ const rwdMenu = document.getElementById("rwdMenu"),
     closeDialog = document.getElementById("closeDialog"),
     body = document.getElementById("body"),
     sloganClose = document.getElementById("sloganClose"),
-    videoSlogan = document.getElementById("videoSlogan")
+    videoSlogan = document.getElementById("videoSlogan"),
+    btnBackTop = document.getElementById("btnBackTop")
     ;
 
 // rwd menu
@@ -74,13 +75,25 @@ function freshInactive() {
     socialLogin.classList.remove("inactive");
 };
 
-// homePage video slogan 
+// scrollDetector
 const videoSloganTop = videoSlogan.offsetTop;
 this.addEventListener("scroll", () => {
     let scrollDetector = this.scrollY;
     if (scrollDetector < videoSloganTop) {
         videoSlogan.classList.remove("display__none");
+        btnBackTop.classList.remove("backTop__footer");
+    } else if (scrollDetector > 4500) {
+        videoSlogan.classList.add("display__none");
+        btnBackTop.classList.add("backTop__footer");
     } else {
         videoSlogan.classList.add("display__none");
+        btnBackTop.classList.remove("backTop__footer");
     }
+});
+
+// back to top btn
+
+btnBackTop.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 });

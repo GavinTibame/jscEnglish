@@ -75,6 +75,35 @@ footer a {
     text-align: center;
 }
 
+/* --------------- back to top btn ----------------- */
+
+.backTop__ctn {
+    position: fixed;
+    bottom: -100px;
+    right: 1rem;
+    height: 10.8rem;
+}
+
+.backTop__btn {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: .1px solid var(--font1-color);
+    transition: all 0s;
+    transform: rotate(-90deg);
+}
+
+.backTop__btn img {
+    margin-left: -8px;
+    clip-path: inset(0px 0px 0px 10px);
+}
+
+.backTop__footer {
+    position: absolute;
+    top: -65px;
+    right: 1rem;
+}
+
 @media screen and (max-width:735px) {
     .footer__menu {
         padding: 100px 20px 120px;
