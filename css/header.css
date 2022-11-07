@@ -72,24 +72,6 @@ body {
     height: 5rem;
 }
 
-/* --------------- logo - text ----------------- */
-
-@media screen and (max-width:970px) {
-    .header .desktop {
-        display: none;
-    }
-
-    .header .mobile {
-        display: inline;
-        text-align: start;
-        padding-left: 2rem;
-    }
-
-    .header__wrapper a img {
-        width: auto
-    }
-}
-
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -173,6 +155,7 @@ body {
     opacity: 1;
 }
 
+
 .nav__course .menu__ctn .menu__inner {
     width: 100%;
     max-width: 1440px;
@@ -210,10 +193,9 @@ body {
 
 .menu__rwd {
     box-sizing: border-box;
-    padding: 30px 10px;
+    padding: 15px 10px;
     display: none;
     min-width: 51.88px;
-    min-height: 87.4px;
 }
 
 .menu__rwd img {
@@ -221,8 +203,11 @@ body {
 }
 
 @media screen and (max-width:735px) {
+
+
     .header__inner {
-        margin: 0
+        margin: 0;
+        height: auto;
     }
 
     .menu__rwd {
@@ -545,4 +530,50 @@ dialog input {
 
 .scrollLock {
     overflow: hidden;
+}
+
+/* --------------- logo - text ----------------- */
+
+@media screen and (max-width:970px) {
+    .header__wrapper {
+        align-items: center;
+    }
+
+    .header .desktop {
+        display: none;
+    }
+
+    .header .mobile {
+        display: inline;
+        text-align: start;
+        padding-left: 2rem;
+        height: 3.8rem;
+        box-sizing: border-box;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+
+    .header__wrapper a img {
+        width: auto;
+        padding: .2rem;
+    }
+
+    .header__inner {}
+
+    .header__nav__menu {
+        align-items: center;
+        height: 3rem;
+    }
+
+    .header__nav__item>a {
+        line-height: 3.8rem;
+    }
+
+    .header__inner .header__nav__login {
+        width: 4rem
+    }
+
+    .header__nav__login {
+        margin: .2rem 1rem
+    }
 }
