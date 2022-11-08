@@ -17,8 +17,7 @@ const rwdMenu = document.getElementById("rwdMenu"),
     closeDialog = document.getElementById("closeDialog"),
     body = document.getElementById("body"),
     sloganClose = document.getElementById("sloganClose"),
-    videoSlogan = document.getElementById("videoSlogan"),
-    btnBackTop = document.getElementById("btnBackTop")
+    videoSlogan = document.getElementById("videoSlogan")
     ;
 
 // rwd menu
@@ -27,6 +26,7 @@ rwdMenu.addEventListener("click", () => {
     menuClose.classList.toggle("display__none");
     menuOpen.classList.toggle("display__none");
     rwdNav.classList.toggle("menu__rwd__show");
+    body.classList.toggle("scrollLock");
 });
 course.addEventListener("click", () => {
     subMenu.classList.toggle("rwd__menu__position");
@@ -93,7 +93,7 @@ this.addEventListener("scroll", () => {
 
 // back to top btn
 
-btnBackTop.addEventListener("click", () => {
+function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-});
+};

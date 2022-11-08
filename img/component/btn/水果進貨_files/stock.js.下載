@@ -1,0 +1,48 @@
+const inputName = document.getElementById("inputName"),
+    inputQty = document.getElementById("inputQty"),
+    listItem = document.querySelector(".list"),
+    productAttr = ["name", "stocks"],
+    btnSubmit = document.querySelector(".button-19"),
+    list1 = document.querySelector(".list")
+    ;
+
+let listsData = Array.from(list1.children).map((list2) => {
+    // list.children[0].textContent 為水果, [1] 為箱數
+    return [list2.children[0].textContent, list2.children[1].innerHTML.slice(0, list2.children[1].length - 1)]
+}).reduce((target, key) => {
+    // key[0].textContent 為水果, [1] 為箱數
+    target[`${key[0]}`] = `${key[1]}`;
+    return target;
+}, {});
+console.log(listsData);
+function getData() {
+    var nameItem = document.querySelectorAll(".name"),
+        stockItem = document.querySelectorAll(".stocks"),
+        nameArray = [],
+        stockArray = []
+        ;
+    nameItem.forEach(item => {
+        nameArray.push(item.innerHTML);
+    });
+    stockItem.forEach(item => {
+        stockArray.push(Number(item.innerHTML.substring(
+            0, item.innerText.length - 1)));
+    });
+    return [nameArray, stockArray];
+};
+let dataArray = getData(),
+    nameArray = dataArray[0],
+    stockArray = dataArray[1];
+dataArray = nameArray.map((ele, idx) => {
+    return [ele, stockArray[idx]];
+});
+let productArray = dataArray.map((array1) => {
+    return array1.reduce((productArray, ele, idx) => {
+        productArray[productAttr[idx]] = ele;
+        return productArray;
+    }, {})
+});
+console.log(productArray);
+console.log(dataArray);
+console.log(nameArray);
+console.log(stockArray);

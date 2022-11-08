@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://127.0.0.1:5500/js20221108/caseStock/test1_fruit_stocks.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果進貨</title>
+    <style>
+        form {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .group {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .group label {
+            padding: 10px;
+            display: block;
+        }
+
+        .group input[type=text] {
+            display: block;
+            width: 100%;
+            height: 50px;
+            border: 0;
+            border: 1px solid #eaeaea;
+            border-radius: 3px;
+            margin: auto;
+            font-size: 24px;
+        }
+
+        #container {
+            width: 40%;
+            margin: auto;
+            margin-top: 100px;
+            border: 1px solid #d8d8d8;
+            background: #ffffff;
+            box-shadow: 3px 3px 10px #d8d8d8;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 50px;
+        }
+
+        .list li {
+            text-align: center;
+            width: 21%;
+            display: block;
+            margin-left: 0.5%;
+            margin-right: 0.5%;
+            margin-bottom: 20px;
+            border: 1px solid #d8d8d8;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 1%;
+            float: left;
+        }
+
+
+        /* CSS */
+        .button-19 {
+            appearance: button;
+            background-color: #1899D6;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            padding: 13px 16px;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .button-19:after {
+            background-clip: padding-box;
+            background-color: #1CB0F6;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .button-19:main,
+        .button-19:focus {
+            user-select: auto;
+        }
+
+        .button-19:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+        }
+
+        .button-19:disabled {
+            cursor: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 輸入產品名稱及庫存量，若產品為現有產品，則增加庫存，若不是，則增加一個項目 -->
+    <div id="container">
+        <form action="http://127.0.0.1:5500/js20221108/caseStock/test1_fruit_stocks.html?">
+            <div class="group"><label for="">產品名稱:</label>
+                <input id="inputName" type="text">
+            </div>
+            <div class="group"><label for="">庫存量(箱):</label>
+                <input id="inputQty" type="text">
+            </div>
+            <input class="button-19" type="submit" value="確定">
+        </form>
+        <div id="fruit_box">
+            <ul class="list">
+                <li>
+                    <h2 class="name">蘋果</h2>
+                    <h3 class="stocks">100箱</h3>
+                </li>
+                <li>
+                    <h2 class="name">芭樂</h2>
+                    <h3 class="stocks">50箱</h3>
+                </li>
+                <li>
+                    <h2 class="name">香蕉</h2>
+                    <h3 class="stocks">80箱</h3>
+                </li>
+                <li>
+                    <h2 class="name">橘子</h2>
+                    <h3 class="stocks">120箱</h3>
+                </li>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <script src="./水果進貨_files/stock.js.下載"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -80,7 +80,7 @@ footer a {
 .backTop__ctn {
     position: fixed;
     bottom: -100px;
-    right: 1rem;
+    right: 2.2rem;
     height: 10.8rem;
 }
 
@@ -101,7 +101,7 @@ footer a {
 .backTop__footer {
     position: absolute;
     top: -65px;
-    right: 1rem;
+    right: 2.2rem;
 }
 
 @media screen and (max-width:735px) {
