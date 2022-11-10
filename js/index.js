@@ -15,9 +15,11 @@ const rwdMenu = document.getElementById("rwdMenu"),
     smallHr = document.getElementById("smallHr"),
     socialLogin = document.getElementById("socialLogin"),
     closeDialog = document.getElementById("closeDialog"),
+    readBar = $("#readBar"),
     body = document.getElementById("body"),
     sloganClose = document.getElementById("sloganClose"),
-    videoSlogan = document.getElementById("videoSlogan")
+    videoSlogan = document.getElementById("videoSlogan"),
+    footer = document.getElementById("footer")
     ;
 
 // rwd menu
@@ -74,22 +76,54 @@ function freshInactive() {
     smallHr.classList.remove("inactive");
     socialLogin.classList.remove("inactive");
 };
+// resizeDetector
+const scrollArray = [],
+    navigationTable = {};
+// scrollArray.push(readBar[0]);
+scrollArray.push(sloganClose);
+scrollArray.push(footer);
+scrollArray.forEach(object => {
+    const sid = object.id,
+        section = object,
+        top = object.offsetTop;
+    navigationTable[sid] = {
+        section,
+        top
+    };
+})
+this.addEventListener("resize", () => {
+    for (const sid in navigationTable) {
+        const section = navigationTable[sid].section,
+            top = section.offsetTop;
+        navigationTable[sid].top = top;
+    }
+})
 
 // scrollDetector
-const videoSloganTop = videoSlogan.offsetTop;
-this.addEventListener("scroll", () => {
-    let scrollDetector = this.scrollY;
-    if (scrollDetector < videoSloganTop) {
+
+window.addEventListener("scroll", () => {
+    const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
+    if (scrollDetector < navigationTable.sloganClose.top) {
         videoSlogan.classList.remove("display__none");
         btnBackTop.classList.remove("backTop__footer");
-    } else if (scrollDetector > 4500) {
-        videoSlogan.classList.add("display__none");
-        btnBackTop.classList.add("backTop__footer");
-    } else {
-        videoSlogan.classList.add("display__none");
-        btnBackTop.classList.remove("backTop__footer");
-    }
+    } else { videoSlogan.classList.add("display__none"); };
 });
+
+window.addEventListener("scroll", () => {
+    const scrollDetector = this.scrollY + readBar[0].offsetTop,
+        percentage = scrollDetector / navigationTable.footer.top * 100 + '%';
+    navigationTable.footer.top = footer.offsetTop;
+    console.log(scrollDetector, percentage);
+    $("#readBar").find("div").css('width', percentage);
+    if (scrollDetector < 100) {
+        $("#readBar").addClass("display__none");
+    } else if (scrollDetector > 100) {
+        $("#readBar").removeClass("display__none");
+    } else if (scrollDetector < (navigationTable.footer.top * .85)) {
+        btnBackTop.classList.remove("backTop__footer");
+    } else { btnBackTop.classList.add("backTop__footer"); };
+});
+
 
 // back to top btn
 
