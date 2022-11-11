@@ -532,6 +532,7 @@ dialog input {
 }
 
 .read__bar {
+    display: none;
     position: fixed;
     background-color: var(--bg-color);
     width: 100%;
@@ -544,7 +545,7 @@ dialog input {
     background-color: var(--red-color);
     z-index: 999;
     width: 0%;
-    height: .3rem;
+    height: 3px;
 }
 
 /* --------------- logo - text ----------------- */
@@ -584,4 +585,8 @@ dialog input {
     .header__nav__login {
         margin: .2rem 1rem
     }
+}
+
+.display__block {
+    display: block !important;
 }

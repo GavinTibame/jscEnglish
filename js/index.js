@@ -79,8 +79,9 @@ function freshInactive() {
 // resizeDetector
 const scrollArray = [],
     navigationTable = {};
-// scrollArray.push(readBar[0]);
-scrollArray.push(sloganClose);
+if (sloganClose) {
+    scrollArray.push(sloganClose);
+}
 scrollArray.push(footer);
 scrollArray.forEach(object => {
     const sid = object.id,
@@ -91,7 +92,7 @@ scrollArray.forEach(object => {
         top
     };
 })
-this.addEventListener("resize", () => {
+window.addEventListener("resize", () => {
     for (const sid in navigationTable) {
         const section = navigationTable[sid].section,
             top = section.offsetTop;
@@ -102,11 +103,12 @@ this.addEventListener("resize", () => {
 // scrollDetector
 
 window.addEventListener("scroll", () => {
-    const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
-    if (scrollDetector < navigationTable.sloganClose.top) {
-        videoSlogan.classList.remove("display__none");
-        btnBackTop.classList.remove("backTop__footer");
-    } else { videoSlogan.classList.add("display__none"); };
+    if (navigationTable.sloganClose) {
+        const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
+        if (scrollDetector < navigationTable.sloganClose.top) {
+            videoSlogan.classList.remove("display__none");
+        } else { videoSlogan.classList.add("display__none"); };
+    };
 });
 
 window.addEventListener("scroll", () => {
@@ -116,11 +118,14 @@ window.addEventListener("scroll", () => {
     console.log(scrollDetector, percentage);
     $("#readBar").find("div").css('width', percentage);
     if (scrollDetector < 100) {
-        $("#readBar").addClass("display__none");
-    } else if (scrollDetector > 100) {
-        $("#readBar").removeClass("display__none");
-    } else if (scrollDetector < (navigationTable.footer.top * .85)) {
+        $("#readBar").removeClass("display__block");
         btnBackTop.classList.remove("backTop__footer");
+    } else if (scrollDetector > 50 &&
+        scrollDetector < (navigationTable.footer.top * .8)) {
+        $("#readBar").addClass("display__block");
+        btnBackTop.classList.remove("backTop__footer");
+    } else if (scrollDetector > (navigationTable.footer.top * .8)) {
+        btnBackTop.classList.add("backTop__footer");
     } else { btnBackTop.classList.add("backTop__footer"); };
 });
 
@@ -128,6 +133,5 @@ window.addEventListener("scroll", () => {
 // back to top btn
 
 function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 };

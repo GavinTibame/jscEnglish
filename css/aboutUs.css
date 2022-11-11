@@ -74,10 +74,14 @@ footer {
 
 .banner__subtitle {
     box-sizing: border-box;
+    display: block;
+    width: 31rem;
     background-color: var(--red-color);
     font-weight: bold;
     color: var(--bg-color);
-    letter-spacing: 2.1em;
+    letter-spacing: 1.9em;
+    margin: 0 auto;
+    padding-left: 1rem;
 }
 
 .container {
