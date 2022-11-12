@@ -19,7 +19,7 @@ const rwdMenu = document.getElementById("rwdMenu"),
     body = document.getElementById("body"),
     sloganClose = document.getElementById("sloganClose"),
     videoSlogan = document.getElementById("videoSlogan"),
-    subscribe = document.getElementById("subscribe"),
+    btnBackTop = document.getElementById("btnBackTop"),
     footer = document.getElementById("footer")
     ;
 
@@ -55,7 +55,6 @@ dialogLogin.addEventListener('click', (e) => {
 
 $(".btn__dialog").on("click", () => {
     dialogLogin.close();
-    dialogSubscribe.close();
     body.classList.remove("scrollLock");
 });
 
@@ -109,7 +108,18 @@ window.addEventListener("resize", () => {
         const section = navigationTable[sid].section,
             top = section.offsetTop;
         navigationTable[sid].top = top;
-    }
+    };
+    if (subscribe) {
+        if (window.innerWidth < 1085) {
+            $("#btnBell").addClass("display__block");
+            $("#sectionArticle").addClass("btn__active");
+            subscribe.classList.add("subscribe__smallSize");
+        } else {
+            $("#btnBell").removeClass("display__block");
+            $("#sectionArticle").removeClass("btn__active");
+            subscribe.classList.remove("subscribe__smallSize");
+        };
+    };
 })
 
 // scrollDetector
@@ -136,27 +146,23 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
-    if (subscribe) {
-        if (scrollDetector < 380) {
-            btnBackTop.classList.add("backTop__footer");
-            subscribe.classList.remove("display__none");
-        } else if (scrollDetector > 380 &&
-            scrollDetector < (navigationTable.footer.top * .8)) {
-            btnBackTop.classList.remove("backTop__footer");
-            subscribe.classList.remove("display__none");
-        } else {
-            btnBackTop.classList.add("backTop__footer");
-            subscribe.classList.add("display__none");
-        };
-    } else {
-        if (scrollDetector < 100) {
-            btnBackTop.classList.add("backTop__footer");
-        } else if (scrollDetector > 100 &&
-            scrollDetector < (navigationTable.footer.top * .8)) {
-            btnBackTop.classList.remove("backTop__footer");
-        } else { btnBackTop.classList.add("backTop__footer"); };
-
-    }
+    // if (subscribe) {
+    //     if (scrollDetector < 380) {
+    //         btnBackTop.classList.add("backTop__footer");
+    //     } else if (scrollDetector > 380 &&
+    //         scrollDetector < (navigationTable.footer.top * .8)) {
+    //         btnBackTop.classList.remove("backTop__footer");
+    //     } else {
+    //         btnBackTop.classList.add("backTop__footer");
+    //     };
+    // } else {
+    if (scrollDetector < 380) {
+        btnBackTop.classList.add("backTop__footer");
+    } else if (scrollDetector > 380 &&
+        scrollDetector < (navigationTable.footer.top * .8)) {
+        btnBackTop.classList.remove("backTop__footer");
+    } else { btnBackTop.classList.add("backTop__footer"); };
+    // }
 });
 
 // back to top btn

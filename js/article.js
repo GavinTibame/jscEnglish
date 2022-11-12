@@ -1,18 +1,28 @@
-const dialogSubscribe = document.getElementById("dialogSubscribe")
+const subscribe = document.getElementById("subscribe")
     ;
 
-dialogSubscribe.addEventListener('click', (e) => {
-    const dialogWindow = dialogSubscribe.getBoundingClientRect();
-    let onDialog = (dialogWindow.top <= e.clientY &&
-        e.clientY <= dialogWindow.top + dialogWindow.height &&
-        dialogWindow.left <= e.clientX &&
-        e.clientX <= dialogWindow.left + dialogWindow.width);
-    if (!onDialog) {
-        dialogSubscribe.close(); body.classList.remove("scrollLock");
-    }
+$(".downSize").on("click", () => {
+    $("#btnBell").addClass("display__block");
+    $("#sectionArticle").addClass("btn__active");
+    subscribe.classList.add("subscribe__smallSize");
 });
 
 $("#btnBell").on("click", () => {
-    dialogSubscribe.showModal();
-    body.classList.add("scrollLock");
-})
+    $("#btnBell").removeClass("display__block");
+    $("#sectionArticle").removeClass("btn__active");
+    subscribe.classList.remove("subscribe__smallSize");
+});
+
+window.addEventListener("scroll", () => {
+    const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
+    if (subscribe) {
+        if (scrollDetector < 380) {
+            btnBackTop.classList.add("backTop__footer");
+        } else if (scrollDetector > 380 &&
+            scrollDetector < (navigationTable.footer.top * .8)) {
+            btnBackTop.classList.remove("backTop__footer");
+        } else {
+            btnBackTop.classList.add("backTop__footer");
+        };
+    };
+});
