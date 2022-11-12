@@ -26,3 +26,17 @@ window.addEventListener("scroll", () => {
         };
     };
 });
+
+window.addEventListener("resize", () => {
+    if (subscribe) {
+        if (window.innerWidth < 1085) {
+            $("#btnBell").addClass("display__block");
+            $("#sectionArticle").addClass("btn__active");
+            subscribe.classList.add("subscribe__smallSize");
+        } else {
+            $("#btnBell").removeClass("display__block");
+            $("#sectionArticle").removeClass("btn__active");
+            subscribe.classList.remove("subscribe__smallSize");
+        };
+    };
+})

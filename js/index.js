@@ -14,7 +14,6 @@ const rwdMenu = document.getElementById("rwdMenu"),
     btnRegister = document.querySelector(".btn__register"),
     smallHr = document.getElementById("smallHr"),
     socialLogin = document.getElementById("socialLogin"),
-    closeDialog = document.querySelectorAll(".btn__dialog"),
     readBar = $("#readBar"),
     body = document.getElementById("body"),
     sloganClose = document.getElementById("sloganClose"),
@@ -58,11 +57,6 @@ $(".btn__dialog").on("click", () => {
     body.classList.remove("scrollLock");
 });
 
-// closeDialog.addEventListener("click", () => {
-//     dialogLogin.close();
-//     body.classList.remove("scrollLock");
-// });
-
 function freshActive() {
     loginBtn.classList.remove("toggle");
     fresh.classList.add("toggle");
@@ -101,7 +95,7 @@ scrollArray.forEach(object => {
         section,
         top
     };
-})
+});
 
 window.addEventListener("resize", () => {
     for (const sid in navigationTable) {
@@ -109,18 +103,7 @@ window.addEventListener("resize", () => {
             top = section.offsetTop;
         navigationTable[sid].top = top;
     };
-    if (subscribe) {
-        if (window.innerWidth < 1085) {
-            $("#btnBell").addClass("display__block");
-            $("#sectionArticle").addClass("btn__active");
-            subscribe.classList.add("subscribe__smallSize");
-        } else {
-            $("#btnBell").removeClass("display__block");
-            $("#sectionArticle").removeClass("btn__active");
-            subscribe.classList.remove("subscribe__smallSize");
-        };
-    };
-})
+});
 
 // scrollDetector
 
@@ -146,23 +129,12 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
-    // if (subscribe) {
-    //     if (scrollDetector < 380) {
-    //         btnBackTop.classList.add("backTop__footer");
-    //     } else if (scrollDetector > 380 &&
-    //         scrollDetector < (navigationTable.footer.top * .8)) {
-    //         btnBackTop.classList.remove("backTop__footer");
-    //     } else {
-    //         btnBackTop.classList.add("backTop__footer");
-    //     };
-    // } else {
     if (scrollDetector < 380) {
         btnBackTop.classList.add("backTop__footer");
     } else if (scrollDetector > 380 &&
         scrollDetector < (navigationTable.footer.top * .8)) {
         btnBackTop.classList.remove("backTop__footer");
     } else { btnBackTop.classList.add("backTop__footer"); };
-    // }
 });
 
 // back to top btn

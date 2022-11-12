@@ -77,7 +77,8 @@ footer {
     background-color: var(--red-color);
     font-weight: bold;
     color: var(--bg-color);
-    letter-spacing: 2.18em;
+    letter-spacing: 2em;
+    padding-left: 2rem
 }
 
 .container {
@@ -88,14 +89,14 @@ footer {
 .content {
     width: 100%;
     margin: 60px auto 0;
-    padding-bottom: 190px;
+    padding-bottom: 90px;
 }
 
 /* ----- GRID 佈局 ----- */
 .wrapper {
     display: grid;
     grid-template-columns: repeat(4, minmax(0px, 1fr));
-    padding: 0 5rem;
+    padding: 0 2rem;
     gap: 2rem 1.6rem;
 }
 
@@ -116,6 +117,7 @@ footer {
 
 .list__news .sidebar {
     grid-column: span 1/ span 1;
+    position: relative;
 }
 
 .list__news a {
@@ -139,7 +141,6 @@ footer {
     border-radius: .3rem;
 }
 
-.list__news .inner .text {}
 
 .list__news .inner .subject {
     display: block;
@@ -158,7 +159,9 @@ footer {
     position: absolute;
     bottom: 0;
     margin-bottom: 1.5rem;
-    display: flex
+    display: flex;
+    font-size: .9rem;
+    color: var(--font1-color);
 }
 
 .inner .author li {
@@ -205,6 +208,9 @@ footer {
 
 /* --------- .subscribe {} --------- */
 .subscribe {
+    position: sticky;
+    top: 25rem;
+    left: 0rem;
     background-color: var(--bg-color);
     display: block;
     border: 2px solid var(--gray-color);
@@ -257,4 +263,74 @@ footer {
     margin-bottom: .8rem;
     width: 100%;
     line-height: 1.8rem;
+}
+
+@media screen and (max-width:970px) {
+    .container {
+        padding-top: 62px;
+    }
+
+    .banner {
+        height: 420px;
+    }
+
+    .banner__title h1 {
+        padding-top: 130px;
+    }
+
+    .inner .author li:not(:first-child):not(:last-child):after {
+        content: ".";
+        /* display: inline-block; */
+    }
+
+    .list__news .inner .author {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:790px) {
+    .wrapper {
+        grid-template-columns: repeat(3, minmax(0px, 1fr))
+    }
+
+    .list__news {
+        grid-column: span 2/ span 2
+    }
+
+    .list__news .news__ctn {
+        grid-template-columns: repeat(1, minmax(0px, 1fr))
+    }
+}
+
+@media screen and (max-width:735px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner__title h1 {
+        padding-top: 88px;
+        font-size: 3.5rem;
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    .banner__title p {
+        text-align: start;
+        padding-left: 1.3rem;
+    }
+
+    .banner__subtitle {
+        display: inline;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .wrapper {
+        grid-template-columns: repeat(2, minmax(0px, 1fr))
+    }
+
+    .subscribe {
+        width: 85vw;
+    }
 }
