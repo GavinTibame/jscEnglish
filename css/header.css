@@ -587,6 +587,10 @@ dialog input {
     }
 }
 
+.display__none {
+    display: none !important;
+}
+
 .display__block {
     display: block !important;
 }

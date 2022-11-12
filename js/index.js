@@ -14,11 +14,12 @@ const rwdMenu = document.getElementById("rwdMenu"),
     btnRegister = document.querySelector(".btn__register"),
     smallHr = document.getElementById("smallHr"),
     socialLogin = document.getElementById("socialLogin"),
-    closeDialog = document.getElementById("closeDialog"),
+    closeDialog = document.querySelectorAll(".btn__dialog"),
     readBar = $("#readBar"),
     body = document.getElementById("body"),
     sloganClose = document.getElementById("sloganClose"),
     videoSlogan = document.getElementById("videoSlogan"),
+    subscribe = document.getElementById("subscribe"),
     footer = document.getElementById("footer")
     ;
 
@@ -40,6 +41,7 @@ login.addEventListener("click", () => {
     dialogLogin.showModal();
     body.classList.add("scrollLock");
 });
+
 dialogLogin.addEventListener('click', (e) => {
     const dialogWindow = dialogLogin.getBoundingClientRect();
     let onDialog = (dialogWindow.top <= e.clientY &&
@@ -50,10 +52,17 @@ dialogLogin.addEventListener('click', (e) => {
         dialogLogin.close(); body.classList.remove("scrollLock");
     }
 });
-closeDialog.addEventListener("click", () => {
+
+$(".btn__dialog").on("click", () => {
     dialogLogin.close();
+    dialogSubscribe.close();
     body.classList.remove("scrollLock");
 });
+
+// closeDialog.addEventListener("click", () => {
+//     dialogLogin.close();
+//     body.classList.remove("scrollLock");
+// });
 
 function freshActive() {
     loginBtn.classList.remove("toggle");
@@ -76,7 +85,9 @@ function freshInactive() {
     smallHr.classList.remove("inactive");
     socialLogin.classList.remove("inactive");
 };
+
 // resizeDetector
+
 const scrollArray = [],
     navigationTable = {};
 if (sloganClose) {
@@ -92,6 +103,7 @@ scrollArray.forEach(object => {
         top
     };
 })
+
 window.addEventListener("resize", () => {
     for (const sid in navigationTable) {
         const section = navigationTable[sid].section,
@@ -115,20 +127,37 @@ window.addEventListener("scroll", () => {
     const scrollDetector = this.scrollY + readBar[0].offsetTop,
         percentage = scrollDetector / navigationTable.footer.top * 100 + '%';
     navigationTable.footer.top = footer.offsetTop;
-    console.log(scrollDetector, percentage);
+    // console.log(scrollDetector, percentage);
     $("#readBar").find("div").css('width', percentage);
     if (scrollDetector < 100) {
         $("#readBar").removeClass("display__block");
-        btnBackTop.classList.remove("backTop__footer");
-    } else if (scrollDetector > 50 &&
-        scrollDetector < (navigationTable.footer.top * .8)) {
-        $("#readBar").addClass("display__block");
-        btnBackTop.classList.remove("backTop__footer");
-    } else if (scrollDetector > (navigationTable.footer.top * .8)) {
-        btnBackTop.classList.add("backTop__footer");
-    } else { btnBackTop.classList.add("backTop__footer"); };
+    } else { $("#readBar").addClass("display__block"); }
 });
 
+window.addEventListener("scroll", () => {
+    const scrollDetector = this.scrollY + readBar[0].offsetTop + readBar[0].offsetHeight;
+    if (subscribe) {
+        if (scrollDetector < 380) {
+            btnBackTop.classList.add("backTop__footer");
+            subscribe.classList.remove("display__none");
+        } else if (scrollDetector > 380 &&
+            scrollDetector < (navigationTable.footer.top * .8)) {
+            btnBackTop.classList.remove("backTop__footer");
+            subscribe.classList.remove("display__none");
+        } else {
+            btnBackTop.classList.add("backTop__footer");
+            subscribe.classList.add("display__none");
+        };
+    } else {
+        if (scrollDetector < 100) {
+            btnBackTop.classList.add("backTop__footer");
+        } else if (scrollDetector > 100 &&
+            scrollDetector < (navigationTable.footer.top * .8)) {
+            btnBackTop.classList.remove("backTop__footer");
+        } else { btnBackTop.classList.add("backTop__footer"); };
+
+    }
+});
 
 // back to top btn
 

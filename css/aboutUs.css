@@ -49,7 +49,7 @@ footer {
 .banner {
     background-image: url(../img/banner/pexels-icsa-1709003.png);
     width: 100%;
-    height: 600px;
+    height: 32rem;
     margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@ footer {
 }
 
 .banner__title h1 {
-    padding-top: 200px;
+    padding-top: 170px;
     text-align: center;
     font-size: 8rem;
     color: var(--bg-color);
@@ -81,7 +81,7 @@ footer {
     color: var(--bg-color);
     letter-spacing: 1.9em;
     margin: 0 auto;
-    padding-left: 1rem;
+    padding-left: 1.9rem;
 }
 
 .container {
@@ -98,7 +98,7 @@ footer {
     border-right: 1px solid var(--gray-color);
     flex-grow: 1;
     margin: 0 auto;
-    padding: 10px;
+    padding: 1rem 10px 10px 10px;
     display: block;
     width: 200px;
     color: var(--font-color);
@@ -196,16 +196,21 @@ footer {
 }
 
 .contact__ctn .form {
-    padding: 0 80px;
+    padding: 0 70px;
 }
 
 .contact__ctn .form h6 {
     text-align: center;
 }
 
+.contact__ctn .name__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .contact__ctn input,
 textarea {
-    width: 50%;
+    width: 48%;
     margin-bottom: 15px;
     display: block;
     border: 2px solid var(--gray-color);
@@ -241,7 +246,6 @@ textarea {
     color: var(--red-color)
 }
 
-.contact__ctn .info {}
 
 .contact__ctn h6 {
     font-size: 1.2rem;
@@ -278,6 +282,7 @@ textarea {
 
 .johnUs .johnUs__img {
     background-image: url(../img/component/resize/kristopher-roller-PC_lbSSxCZE-unsplash.jpg);
+    background-position: center;
     width: 50%;
     line-height: 300px;
     display: block;
@@ -310,9 +315,6 @@ textarea {
     font-size: 1.3rem;
 }
 
-.benefit {}
-
-
 .meow__img {
     background-image: url(../img/component/pexels-pixabay-416160.jpg);
     line-height: 50vh;
@@ -338,4 +340,171 @@ textarea {
 .aboutUs .john {
     margin-bottom: 0;
     padding-bottom: 190px
+}
+
+@media screen and (max-width:970px) {
+    .container {
+        padding-top: 62px;
+    }
+
+    .banner {
+        height: 420px;
+    }
+
+    .banner__title h1 {
+        padding-top: 130px;
+    }
+
+    .content dl a {
+        font-size: 1.6rem;
+    }
+
+    .content dl a dt {
+        font-size: .9rem;
+    }
+
+    .title__zh {
+        font-size: .8rem;
+    }
+
+    .title span {
+        font-size: 3.8rem;
+        margin: 0 2rem;
+    }
+
+    .concept__ctn li h6 {
+        font-size: 2.5rem;
+        margin: 30px auto;
+    }
+
+    .concept__ctn li p {
+        font-size: 1.3rem;
+    }
+
+    .contact__ctn .form {
+        padding: 0 30px;
+    }
+
+    .reverse .johnUs__text {
+        font-size: 1.1rem;
+    }
+
+    .meow__img {
+        margin: 190px 0 50px;
+    }
+
+    .meow__text ul {
+        padding: 0 200px;
+    }
+}
+
+@media screen and (max-width:815px) {
+    .concept__ctn li h6 {
+        font-size: 2rem;
+        margin: 0 auto;
+    }
+
+    .concept__ctn li p {
+        font-size: 1rem;
+    }
+
+    .contact__ctn .form {
+        padding: 0;
+    }
+
+    .johnUs .johnUs__img {
+        line-height: 200px;
+    }
+
+    .johnUs__text {
+        font-size: 1.2rem;
+        padding: 0 55px;
+    }
+
+    .reverse .johnUs__text {
+        font-size: .95rem;
+    }
+
+    .meow__text ul {
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width:735px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner__title h1 {
+        padding-top: 88px;
+        font-size: 3.5rem;
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    .banner__title p {
+        text-align: start;
+        padding-left: 1.3rem;
+    }
+
+    .banner__subtitle {
+        display: inline;
+        padding: 0;
+    }
+
+    .content dl a {
+        font-size: 1.38rem;
+    }
+
+    .content dl a span {
+        font-size: .8rem;
+    }
+
+    .contact__ctn {
+        padding: 0 30px;
+    }
+
+    .johnUs__text {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:428px) {
+    .concept__ctn {
+        flex-direction: column;
+    }
+
+    .title span {
+        font-size: 3rem;
+        margin: 0 1rem;
+    }
+
+    .concept__ctn>li {
+        width: 90%;
+    }
+
+    .concept__ctn li h6 {
+        margin: 20px auto 0;
+    }
+
+    .contact__ctn {
+        grid-template-columns: repeat(1, minmax(0px, 1fr))
+    }
+
+    .johnUs {
+        flex-direction: column;
+    }
+
+    .johnUs .johnUs__img {
+        width: 90%;
+    }
+
+    .johnUs__text {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .meow__text ul {
+        padding: 0 30px;
+    }
 }
