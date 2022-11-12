@@ -1,5 +1,5 @@
 footer {
-    background-image: url(/img/footerBanner.jpg);
+    background-image: url(../img/footerBanner.jpg);
 }
 
 .aboutUs {
@@ -450,6 +450,7 @@ textarea {
     .banner__subtitle {
         display: inline;
         padding: 0;
+        line-height: 1.1rem;
     }
 
     .content dl a {
@@ -480,7 +481,7 @@ textarea {
     }
 
     .concept__ctn>li {
-        width: 90%;
+        width: 90vw;
     }
 
     .concept__ctn li h6 {

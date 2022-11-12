@@ -77,7 +77,8 @@ footer {
     background-color: var(--red-color);
     font-weight: bold;
     color: var(--bg-color);
-    letter-spacing: 1.08em;
+    letter-spacing: 1em;
+    padding-left: 1rem;
 }
 
 .container {
@@ -94,7 +95,7 @@ footer {
     border-right: 1px solid var(--gray-color);
     flex-grow: 1;
     margin: 0 auto;
-    padding: 10px;
+    padding: 1rem 10px 10px;
     display: block;
     width: 200px;
     color: var(--font-color);
@@ -204,4 +205,79 @@ footer {
 .qna__col .answer__ctn a {
     color: var(--red-color);
     font-weight: 600;
+}
+
+@media screen and (max-width:970px) {
+    .container {
+        padding-top: 62px;
+    }
+
+    .banner {
+        height: 420px;
+    }
+
+    .banner__title h1 {
+        padding-top: 130px;
+    }
+
+    .content dl a {
+        font-size: 1.6rem;
+    }
+
+    .content dl a dt {
+        font-size: .9rem;
+    }
+
+}
+
+@media screen and (max-width:735px) {
+    .banner {
+        height: 300px;
+        background-position: 0 -10rem;
+    }
+
+    .banner__title h1 {
+        padding-top: 88px;
+        font-size: 3.5rem;
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    .banner__title p {
+        text-align: start;
+        padding-left: 1.3rem;
+        line-height: 1.1rem;
+    }
+
+    .banner__subtitle {
+        display: inline;
+        padding: 0;
+    }
+
+    .content dl a {
+        font-size: 1.38rem;
+    }
+
+    .content dl a span {
+        font-size: .8rem;
+    }
+
+    .qna .qna__ctn section {
+        padding: 2rem 1rem;
+    }
+
+    .qna__ctn .qna__col {
+        grid-template-columns: repeat(1, minmax(0px, 1fr));
+        gap: 0;
+    }
+}
+
+@media screen and (max-width:428px) {
+    .banner {
+        background-position: 0 -5rem;
+    }
+
+    .qna .qna__ctn {
+        padding: 0 1rem;
+    }
 }
