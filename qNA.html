@@ -41,30 +41,30 @@
             </div>
             <div class="content">
                 <dl>
-                    <a href="#">
+                    <a href="#sectionCourse">
                         <dd><i class="fa-solid fa-chalkboard-user"></i></dd>
                         <dt><span>課程相關</span></dt>
                     </a>
-                    <a href="#">
+                    <a href="#sectionPayment">
                         <dd><i class="fa-regular fa-credit-card"></i></dd>
                         <dt><span>報名與繳費</span></dt>
                     </a>
-                    <a href="#">
+                    <a href="#sectionTeacher">
                         <dd><i class="fa-solid fa-user-tie"></i></dd>
                         <dt><span>講師相關</span></dt>
                     </a>
                 </dl>
                 <section class="qna__ctn">
-                    <section class="course">
+                    <section id="sectionCourse" class="course">
                         <h2>課程相關問題</h2>
                         <div class="qna__col">
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="courseQ1" class="check__ques">
+                                    <input type="checkbox" id="courseQ1" data-target="courseA1" class="check__ques">
                                     <label for="courseQ1" class="question">
                                         <h3>上課地點在哪裡？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div id="courseA1" class="answer__ctn">
                                         <div class="answer">
                                             <p>於
                                                 <a href="https://frontend.tibame.com/login?error=l">JSC線上學習平台</a>
@@ -75,11 +75,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="courseQ2" class="check__ques">
+                                    <input type="checkbox" id="courseQ2" data-target="courseA2" class="check__ques">
                                     <label for="courseQ2" class="question">
                                         <h3>我應該向一名講師學習還是向多名講師學習？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div id="courseA2" class="answer__ctn">
                                         <div class="answer">
                                             <p>我們理解只想和你最喜歡的講師一起上課的感覺。</p>
                                             <p>「我們相處得很好，他的英語很容易理解，他也理解我。」</p>
@@ -95,11 +95,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="courseQ3" class="check__ques">
+                                    <input type="checkbox" id="courseQ3" data-target="courseA3" class="check__ques">
                                     <label for="courseQ3" class="question">
                                         <h3>如何聯繫講師？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div id="courseA3" class="answer__ctn">
                                         <div class="answer">
                                             <p>無論是從沒購買過的講師，還是已購買過的講師，JSC Learning都提供直接聯繫講師的方式。</p>
                                             <p>讓你在購課前後，都能夠跟講師溝通，讓講師可以了解你的學習需要。甚至在預約課程時遇到困難，都可以先跟講師溝通。</p>
@@ -110,11 +110,11 @@
                             </ul>
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="courseQ4" class="check__ques">
+                                    <input type="checkbox" id="courseQ4" data-target="courseA4" class="check__ques">
                                     <label for="courseQ4" class="question">
                                         <h3>可以停止使用JSC Learning的服務嗎？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div id="courseA4" class="answer__ctn">
                                         <div class="answer">
                                             <p>可以的，有關程序請至少在續訂日前 2 天進行。</p>
                                             <p>取消時會顯示調查問卷頁面，再請回答並按照說明完成程序。</p>
@@ -125,11 +125,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="courseQ5" class="check__ques">
+                                    <input type="checkbox" data-target="courseA5" id="courseQ5" class="check__ques">
                                     <label for="courseQ5" class="question">
                                         <h3>推薦什麼樣的週期來學習？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="courseA5">
                                         <div class="answer">
                                             <p>我們建議你通過“在線課程”和“自學”增進英語和溝通技巧，然後在兩者間隔中以“實戰操作”進行練習。</p>
                                             <p>對於自學，除了備課和復習外，與“學伴”一起學習是有效率的進步方式。</p>
@@ -141,16 +141,16 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="payment">
+                    <section id="sectionPayment" class="payment">
                         <h2>報名與繳費</h2>
                         <div class="qna__col">
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="paymentQ1" class="check__ques">
+                                    <input type="checkbox" id="paymentQ1" data-target="paymentA1" class="check__ques">
                                     <label for="paymentQ1" class="question">
                                         <h3>有提供分期付款嗎？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="paymentA1">
                                         <div class="answer">
                                             <p>我們有提供無息分期付款。</p>
                                             <p>每一門課程提供的分期數不同，可查閱各講師課程報名頁面。</p>
@@ -160,11 +160,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="paymentQ2" class="check__ques">
+                                    <input type="checkbox" id="paymentQ2" data-target="paymentA2" class="check__ques">
                                     <label for="paymentQ2" class="question">
                                         <h3>我可以將付款方式從PayPal更改為銀行賬戶轉賬嗎？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="paymentA2">
                                         <div class="answer">
                                             <p>你可以在你的 PayPal 帳戶中更改它。</p>
                                             <ul>
@@ -181,11 +181,11 @@
                             </ul>
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="paymentQ3" class="check__ques">
+                                    <input type="checkbox" id="paymentQ3" data-target="paymentA3" class="check__ques">
                                     <label for="paymentQ3" class="question">
                                         <h3>可以開收據或發票嗎？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="paymentA3">
                                         <div class="answer">
                                             <p>課程將合法開立免稅發票，並於完課後提供。</p>
                                             <p>若有報帳需求，請於報名時備註公司名稱及統一編號。</p>
@@ -194,11 +194,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="paymentQ4" class="check__ques">
+                                    <input type="checkbox" id="paymentQ4" data-target="paymentA4" class="check__ques">
                                     <label for="paymentQ4" class="question">
                                         <h3>如果取消課堂，可以退款嗎？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="paymentA4">
                                         <div class="answer">
                                             <p>若你因突發狀況導致無法繼續上課，或因不適應教師教課方式而打算停止學習，你可以先取消已預約之課程。</p>
                                             <p>若在課程開始 12 小時以前取消課時，課程將會回到未預約之課堂數中，你可以選擇 重新預約 或是 申請退課。</p>
@@ -213,16 +213,16 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="teacher">
+                    <section id="sectionTeacher" class="teacher">
                         <h2>講師相關</h2>
                         <div class="qna__col">
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="teacherQ1" class="check__ques">
+                                    <input type="checkbox" id="teacherQ1" data-target="teacherA1" class="check__ques">
                                     <label for="teacherQ1" class="question">
                                         <h3>講師如何更改已預約的課程時間？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="teacherA1">
                                         <div class="answer">
                                             <p>您的課程無法透過系統自行取消，講師端會顯示為"錯過此課程"。請您與您的學生發送消息說明您的情況並溝通解決辦法，再等到課程時間開始後才可點選『回報問題』。點選回報問題後請簡短的寫下與學生協調一個適當的處理方式
                                             </p>
@@ -231,11 +231,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="teacherQ2" class="check__ques">
+                                    <input type="checkbox" id="teacherQ2" data-target="teacherA2" class="check__ques">
                                     <label for="teacherQ2" class="question">
                                         <h3>如何提領薪資？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="teacherA2">
                                         <div class="answer">
                                             <p>當設定好您的收帳方式後，下一步就可以提領您的薪資。</p>
                                             <p>JSC Learning 在每月 5 號會結算講師上一個月的教學收入，並自動轉換算 JC 幣( 1 JC 幣 ＝ 1
@@ -248,11 +248,11 @@
                             </ul>
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="teacherQ3" class="check__ques">
+                                    <input type="checkbox" id="teacherQ3" data-target="teacherA3" class="check__ques">
                                     <label for="teacherQ3" class="question">
                                         <h3>如何設定客製化課程給學生？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="teacherA3">
                                         <div class="answer">
                                             <p>在講師常用功能區設定私人課程專案後，按下“已完成”進入下一步，再將課程報價訊息發送給學生。</p>
                                         </div>
@@ -260,11 +260,11 @@
                                     </input>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="teacherQ4" class="check__ques">
+                                    <input type="checkbox" id="teacherQ4" data-target="teacherA4" class="check__ques">
                                     <label for="teacherQ4" class="question">
                                         <h3>如何銷售更多的課程？</h3>
                                     </label>
-                                    <div class="answer__ctn">
+                                    <div class="answer__ctn" id="teacherA4">
                                         <div class="answer">
                                             <p>若您的開課時段較少，這會影響到您獲得的派單量，以及學生的購課意願。</p>
                                             <p>大多學生希望能彈性預約自己想要的時段，並穩定上課。如果教師開放的時段過少，將影響學生購課的意願</p>
@@ -288,6 +288,7 @@
             $("#footer").load("footer.html")
         });
     </script>
+    <script src="js/qna.js"></script>
 </body>
 
 </html>

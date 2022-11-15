@@ -219,3 +219,13 @@ footer {
         padding: 0;
     }
 }
+
+@media screen and (max-width:510px) {
+    .lecturer nav ul {
+        flex-direction: column;
+    }
+
+    .lecturer nav ul li a {
+        margin-bottom: 1rem;
+    }
+}

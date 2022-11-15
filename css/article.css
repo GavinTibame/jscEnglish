@@ -190,8 +190,8 @@ footer {
     background-color: var(--bg-color);
     position: sticky;
     z-index: 999;
-    top: 25rem;
-    left: calc(100vw - 18.15rem);
+    top: 53%;
+    left: calc(100vw - 17.2rem);
     width: 15rem;
     border: 2px solid var(--gray-color);
     border-radius: .3rem;
@@ -317,9 +317,9 @@ footer {
     padding: 0;
     box-shadow: none;
     background-color: transparent;
-    top: 39.3rem;
-    left: calc(100vw - 6.4rem);
     width: 5%;
+    top: 82%;
+    left: calc(100vw - 5.4rem);
 }
 
 .subscribe__smallSize *:not(:last-child) {

@@ -256,13 +256,13 @@ body {
 
     .nav__course .menu__ctn .menu__inner {
         display: block;
-        padding: 0rem 5rem;
+        padding: 0rem 2rem;
     }
 
     .menu__ctn .menu__inner dl {
         text-align: start;
         display: flex;
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 3rem;
     }
 
     .menu__ctn .menu__inner dl:not(:last-child) {
@@ -273,7 +273,7 @@ body {
     .menu__inner dl dt {
         color: var(--font1-color);
         opacity: .5;
-        padding-right: 2.8rem;
+        box-sizing: border-box;
     }
 
     .menu__inner dl dd {
@@ -281,7 +281,7 @@ body {
     }
 
     .menu__ctn .menu__inner ul {
-        margin: 0;
+        margin: 0 0 0 2rem;
     }
 
     .menu__ctn .menu__inner ul:not(:last-child) {
@@ -305,11 +305,13 @@ body {
         border: 0;
     }
 
-    .header__nav__menu .nav__course:active .menu__course::after {
+    /* ---------------------------------------------  when click 才會旋轉？ */
+
+    /* .header__nav__menu .nav__course:active .menu__course::after {
         transform: rotate(-135deg);
         margin-top: 3px;
         border-color: var(--red-color);
-    }
+    } */
 
     .menu__rwd__open {
         position: fixed;
@@ -336,7 +338,7 @@ body {
         opacity: 1;
     }
 
-    /*.menu__course::after {
+    /* .menu__course::after {
         transform: rotate(-135deg);
         margin-top: 3px;
         border-color: var(--red-color);

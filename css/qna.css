@@ -2,6 +2,10 @@ footer {
     background-image: url(/img/footerBanner.jpg);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .qna {
     font-family: 'Inter', sans-serif;
 }
@@ -189,6 +193,11 @@ footer {
     transform: rotate(45deg) translateY(-2px);
 }
 
+.qna__ctn .qna__col .rotate::after {
+    transform: rotate(-135deg);
+    margin-top: 3px;
+}
+
 .qna__ctn .qna__col .answer__ctn {
     display: none;
     padding: 1.3rem 1.2rem .8rem 2.3rem;
@@ -280,4 +289,8 @@ footer {
     .qna .qna__ctn {
         padding: 0 1rem;
     }
+}
+
+.display__block {
+    display: block !important;
 }
