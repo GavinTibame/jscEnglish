@@ -80,30 +80,15 @@
                     <ul class="contact__ctn">
                         <li class="form">
                             <h6>有任何問題嗎？歡迎填寫以下表單，我們會盡快回覆您！</h6>
-                            <form
-                                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYTN9aqML4jow1-NKUqRX8vj0YxSFuSmIJOMwKnhPQ1MCbAQ/formResponse"
-                                target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve CEkLOc">
+                            <form action="https://sheetdb.io/api/v1/dvpqq9vrmy7z7" method="post" id="sheetdb-form">
                                 <div class="name__wrapper">
-                                    <input type="text" class="formName" placeholder="姓氏" required jsname="YPqjbf"
-                                        autocomplete="off" tabindex="0" aria-labelledby="i1" aria-describedby="i2 i3"
-                                        required="" dir="auto" data-initial-dir="auto" data-initial-value="">
-                                    <input type="text" class="formName" placeholder="名字" required jsname="YPqjbf"
-                                        autocomplete="off" tabindex="0" aria-labelledby="i1" aria-describedby="i2 i3"
-                                        required="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                                    <input type="text" class="formName" name="data[lastName]" placeholder="姓氏">
+                                    <input type="text" class="formName" name="data[firstName]" placeholder="名字">
                                 </div>
-                                <input type="email" class="formEmail" placeholder="電子信箱" required jsname="YPqjbf"
-                                    autocomplete="off" tabindex="0" aria-labelledby="i5" aria-describedby="i6 i7"
-                                    required="" dir="auto" data-initial-dir="auto" data-initial-value="">
-                                <input type="text" class="formSubject" placeholder="訊息標題" required jsname="YPqjbf"
-                                    autocomplete="off" tabindex="0" aria-labelledby="i9" aria-describedby="i10 i11"
-                                    required="" dir="auto" data-initial-dir="auto" data-initial-value="">
-                                <textarea class="textArea" placeholder="您的訊息" required jsname="YPqjbf" data-rows="1"
-                                    tabindex="0" aria-label="您的回答" jscontroller="gZjhIf"
-                                    jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" dir="auto" data-initial-dir="auto"
-                                    data-initial-value="" aria-labelledby="i13" aria-describedby="i14 i15"></textarea>
-                                <button role="button" class="formSubmit" jscontroller="VXdfxd"
-                                    jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;"
-                                    jsshadow="" jsname="M2UYVd" tabindex="0">
+                                <input type="email" class="formEmail" name="data[email]" placeholder="電子信箱">
+                                <input type="text" class="formSubject" name="data[title]" placeholder="訊息標題">
+                                <textarea class="textArea" placeholder="您的訊息" name="data[msg]"></textarea>
+                                <button role="button" class="formSubmit">
                                     提交
                                 </button>
                             </form>
@@ -185,6 +170,7 @@
             $("#footer").load("footer.html")
         });
     </script>
+    <script src="js/aboutUs.js"></script>
 </body>
 
 </html>

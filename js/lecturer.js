@@ -222,9 +222,50 @@ const lecturerList = [
             "英文學科"
         ],
         name: "朱財水"
+    },
+    {
+        id: 29,
+        img: "img/teacher/psed/tamarcus-brown-29pFbI_D1Sc-unsplash.png",
+        subject: [
+            "物理學科"
+        ],
+        name: "曹駿琇"
+    },
+    {
+        id: 30,
+        img: "img/teacher/psed/tyler-nix-ZGa9d1a_4tA-unsplash.png",
+        subject: [
+            "理化學科"
+        ],
+        name: "張偉智"
+    },
+    {
+        id: 31,
+        img: "img/teacher/psed/willian-souza-p5BoBF0XJUA-unsplash.png",
+        subject: [
+            "物理學科"
+        ],
+        name: "何冠廷"
+    },
+    {
+        id: 32,
+        img: "img/teacher/psed/yogendra-singh-HrpYHchKb5Y-unsplash.png",
+        subject: [
+            "物理學科"
+        ],
+        name: "全峻豪"
+    },
+    {
+        id: 33,
+        img: "img/teacher/psed/zahir-namane-hwc7eIQiTCE-unsplash.png",
+        subject: [
+            "理化學科"
+        ],
+        name: "謝舒然"
     }
 ]
     , lecturerItem = document.querySelectorAll(".list div.inner"),
+    buttonList = document.querySelectorAll(".lecturer .content nav li a"),
     text = [];
 let tid = 1;
 lecturerItem.forEach(div => {
@@ -236,6 +277,7 @@ lecturerItem.forEach(div => {
     text.push(data);
     tid++;
 });
+
 function createLecturerCardElement(object) {
     const htmlElement = `<a id="lecturer${object.id}"href="#">
 <div class="inner">
@@ -247,12 +289,29 @@ function createLecturerCardElement(object) {
 </div>
 </a>`;
     return htmlElement;
-}
+};
 
-function renderLecturerList() {
+function renderLecturerList(lecturerList) {
     lecturerList.forEach(lecturer => {
         const card = createLecturerCardElement(lecturer);
         $("#lecturerList").append(card);
-    })
+    });
 };
-renderLecturerList()
+
+renderLecturerList(lecturerList);
+
+$(".lecturer .content nav li a").on("click", function () {
+    $(".lecturer .content nav li a").removeClass("active");
+    $(this).addClass("active");
+    $("#lecturerList").empty();
+    const subjectFilter = lecturerList.filter((lecturer, idx, array) => {
+        if (this.innerText == '全部') {
+            return lecturer;
+        } else {
+            return lecturer.subject == this.innerText;
+        }
+    });
+    renderLecturerList(subjectFilter);
+});
+
+
