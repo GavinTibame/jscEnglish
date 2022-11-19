@@ -232,6 +232,7 @@ textarea {
 .contact__ctn .textArea {
     height: 150px;
     font-family: 'Inter', sans-serif;
+    resize: none;
 }
 
 .contact__ctn .formSubmit {

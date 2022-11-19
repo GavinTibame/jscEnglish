@@ -10,3 +10,10 @@ contactForm.addEventListener("submit", e => {
         contactForm.reset()
     );
 });
+$(".textArea").on("keyup", function () {
+    let textAreaContent = $(this).val(),
+        contentArray = textAreaContent.split("\n"),
+        count = contentArray.length,
+        paddingAddBorder = $(this).outerHeight() - $(this).height();
+    $(this).css("height", (150 + 8 * count + paddingAddBorder) + "px");
+})

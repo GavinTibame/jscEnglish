@@ -6,7 +6,6 @@ qnaList.forEach(checkbox => {
     const answerId = checkbox.dataset.target,
         answer = document.getElementById(answerId)
         ;
-    console.log(checkbox.nextElementSibling.childNodes[1]);
     qnaTable[answerId] = { checkbox, answer };
     checkbox.addEventListener("click", () => {
         answer.classList.toggle("display__block");
