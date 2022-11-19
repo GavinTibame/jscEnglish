@@ -343,6 +343,9 @@ body {
         margin-top: 3px;
         border-color: var(--red-color);
     } */
+    .header__nav__menu .nav__course:hover .menu__course::after {
+        transform: rotate(45deg);
+    }
 }
 
 .header__nav__login {
@@ -595,4 +598,18 @@ dialog input {
 
 .display__block {
     display: block !important;
+}
+
+@media screen and (max-width:428px) {
+    .header__nav__login {
+        outline: 0;
+    }
+
+    .header__wrapper>a {
+        width: 50vw;
+    }
+
+    .title span {
+        font-size: 3rem;
+    }
 }

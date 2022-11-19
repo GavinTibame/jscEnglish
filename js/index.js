@@ -32,6 +32,7 @@ rwdMenu.addEventListener("click", () => {
 });
 course.addEventListener("click", () => {
     subMenu.classList.toggle("rwd__menu__position");
+    course.classList.toggle("rotate__after");
 });
 
 // dialog 
