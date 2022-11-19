@@ -13,3 +13,7 @@ qnaList.forEach(checkbox => {
     })
 });
 
+$("div.content dl a").on("click", function () {
+    const scrollToItem = document.getElementById(this.dataset.target);
+    window.scrollTo({ top: scrollToItem.offsetTop - 80, behavior: "smooth" });
+})

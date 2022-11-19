@@ -108,6 +108,7 @@ html {
     text-decoration: none;
     border-bottom: 3px solid transparent;
     background-color: var(--bg-color);
+    cursor: pointer;
 }
 
 .content dl a dt {
