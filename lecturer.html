@@ -48,6 +48,14 @@
                         <li><a>物理學科</a></li>
                     </ul>
                 </nav>
+                <div class="loveList__wrapper">
+                    <div id="btnLoveList" class="loveList__ctn">
+                        <button id="loveList" class="loveList__btn">
+                            <i class="fa-regular fa-heart"></i>
+                            <div id="loveQty" class="loveQty">0</div>
+                        </button>
+                    </div>
+                </div>
                 <div class="wrapper">
                     <div class="list" id="lecturerList">
                         <!-- <a href="#">
@@ -283,6 +291,40 @@
         </div>
     </main>
     <div id="footer"></div>
+    <dialog class="dialog__list" id="dialogList" role="dialog">
+        <div class="dialog__ctn" role="document">
+            <div class="dialog__content">
+                <div class="">
+                    <h5 class="lecturer__title">
+                        親愛的講師名單<i class="fa-solid fa-user-tie"></i>
+                    </h5>
+                </div>
+                <div class="">
+                    <table id="loveTable" class="love__table">
+                        <thead>
+                            <tr>
+                                <th class="">講師名稱</th>
+                                <th class="">單價</th>
+                                <th class="">時數</th>
+                                <th class="">總計</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loveListBody"></tbody>
+                        <tfoot id="loveListFoot"></tfoot>
+                    </table>
+                </div>
+                <div class="">
+                    <button id="emptyLoveBtn" type="button" class="btn__empty">
+                        <i class="fas fa-trash-alt"></i>清空名單
+                    </button>
+                    <button id="" type="button" class="btn__close">
+                        購入時數
+                    </button>
+                    <button type="button" class="btn__dialog">+</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
     <script>
         $(() => {
             $("#header").load("header.html");

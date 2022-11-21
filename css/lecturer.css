@@ -89,7 +89,8 @@ footer {
 .content {
     width: 100%;
     margin: 60px auto 0;
-    padding-bottom: 190px;
+    padding-bottom: 80px;
+    position: relative;
 }
 
 .content nav {
@@ -202,12 +203,132 @@ footer {
     font-weight: bold;
 }
 
+.inner .love__btn {
+    position: absolute;
+    top: calc(94% - 28px);
+    left: calc(94% - 28px);
+    width: 28px;
+    height: 28px;
+    background-color: var(--red-color);
+    border-radius: 50%;
+    color: var(--bg-color);
+    border: 0;
+    cursor: pointer;
+}
+
+.inner .love__btn:hover {
+    animation: love .1s;
+}
+
+.inner .love__btn i {
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    width: 5px;
+    height: 8px;
+}
+
+@keyframes love {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* 
 @media screen and (max-width:1200px) {
     .list {
         grid-template-columns: repeat(5, minmax(0px, 1fr));
     }
 } */
+
+.loveList__wrapper {
+    position: sticky;
+    top: calc(100vh - 50px - 12%);
+    left: calc(100vw - 6.5%);
+    width: 50px;
+}
+
+.loveList__ctn {
+    position: relative;
+}
+
+.loveList__btn {
+    font-size: 18px;
+    color: var(--font1-color);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: .1px solid var(--font1-color);
+    transition: all .3s;
+}
+
+.loveQty {
+    width: 25px;
+    height: 25px;
+    background-color: var(--red-color);
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    top: 15px;
+    right: 5px;
+    color: var(--bg-color);
+    transform: scale(.5);
+}
+
+.dialog__list {
+    position: fixed;
+    border: none;
+    box-shadow: 0 2px 6px #ccc;
+    border-radius: 3px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.dialog__list::backdrop {
+    box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, .3);
+}
+
+.dialog__list .dialog__ctn {
+    padding: 2.5rem 1.8rem 1.8rem;
+}
+
+.dialog__list .love__table {
+    margin: 0rem 0rem 1rem;
+}
+
+.dialog__content div h5.lecturer__title {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--gray-tgh-color);
+    background-color: var(--bg-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding-bottom: .3rem;
+    margin-bottom: .5rem;
+    line-height: 1.6rem;
+    color: var(--font1-color);
+}
+
+.dialog__content .lecturer__title i {
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    color: var(--red-color);
+}
+
+.dialog__content .love__table th,
+.dialog__content .love__table td {
+    padding: .8rem 5rem .8rem 0;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.dialog__content .love__table .t__center {
+    text-align: center;
+}
 
 @media screen and (max-width:970px) {
     /* .list {
@@ -272,4 +393,8 @@ footer {
 .hide {
     display: block;
     visibility: hidden;
+}
+
+.display__block {
+    display: block !important;
 }
