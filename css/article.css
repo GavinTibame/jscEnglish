@@ -185,13 +185,12 @@ footer {
 }
 
 /* --------- .subscribe {} --------- */
-
 .subscribe {
     background-color: var(--bg-color);
     position: sticky;
     z-index: 999;
-    top: 53%;
-    left: calc(100vw - 17.2rem);
+    top: calc(100vh - 265px - 12%);
+    left: calc(100vw - 240px - 3%);
     width: 15rem;
     border: 2px solid var(--gray-color);
     border-radius: .3rem;
@@ -251,6 +250,7 @@ footer {
 .subscribe .btn__subscribe {
     width: 50px;
     height: 50px;
+    padding: 0 1vw;
     border-radius: 2px;
     border: 2px solid var(--red-color);
     background-color: var(--red-color);
@@ -260,7 +260,26 @@ footer {
     display: none;
 }
 
+@media screen and (max-width: 1400px) {
+    .subscribe {
+        top: calc(100vh - 265px - 12%);
+        left: calc(100vw - 240px - 3%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .subscribe {
+        top: calc(100vh - 265px - 12%);
+        left: calc(100vw - 240px - 3%);
+    }
+}
+
 @media screen and (max-width:970px) {
+    .subscribe {
+        top: calc(100vh - 265px - 12%);
+        left: calc(100vw - 240px - 3%);
+    }
+
     .container {
         padding-top: 62px;
     }
@@ -276,6 +295,13 @@ footer {
     .list__post {
         grid-template-columns: repeat(2, minmax(0px, 1fr));
         padding: 0 8vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .subscribe {
+        top: calc(100vh - 265px - 12%);
+        left: calc(100vw - 240px - 3%);
     }
 }
 
@@ -303,6 +329,8 @@ footer {
     }
 
     .subscribe {
+        top: calc(100vh - 265px - 12%);
+        left: calc(100vw - 240px - 3%);
         margin: 0;
     }
 
@@ -318,8 +346,26 @@ footer {
     box-shadow: none;
     background-color: transparent;
     width: 5%;
-    top: 82%;
-    left: calc(100vw - 5.4rem);
+    top: 80%;
+    left: calc(100vw - 6.5%);
+}
+
+@media screen and (max-width:800px) {
+    .subscribe__smallSize {
+        left: calc(100vw - 40px - 6%)
+    }
+}
+
+@media screen and (max-width:605px) {
+    .subscribe__smallSize {
+        left: calc(100vw - 40px - 10%)
+    }
+}
+
+@media screen and (max-width:428px) {
+    .subscribe__smallSize {
+        left: calc(100vw - 40px - 12%)
+    }
 }
 
 .subscribe__smallSize *:not(:last-child) {

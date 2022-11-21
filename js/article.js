@@ -1,4 +1,5 @@
-const subscribe = document.getElementById("subscribe")
+const subscribe = document.getElementById("subscribe"),
+    subscribeForm = document.getElementById("sheetdb-form")
     ;
 
 $(".downSize").on("click", () => {
@@ -39,4 +40,22 @@ window.addEventListener("resize", () => {
             subscribe.classList.remove("subscribe__smallSize");
         };
     };
-})
+});
+
+subscribeForm.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(subscribeForm.action, {
+        method: "POST",
+        body: new FormData(subscribeForm)
+    }).then(
+        response => response.json()
+    ).then(
+        subscribeForm.reset()
+    ).then(
+        $("#btnBell").addClass("display__block")
+    ).then(
+        $("#sectionArticle").addClass("btn__active")
+    ).then(
+        subscribe.classList.add("subscribe__smallSize")
+    )
+});

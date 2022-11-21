@@ -81,6 +81,7 @@ footer a {
     position: fixed;
     bottom: -100px;
     right: 2.2rem;
+    left: calc(100vw - 6.5%);
     height: 10.8rem;
 }
 
@@ -102,6 +103,13 @@ footer a {
     position: absolute;
     top: -65px;
     right: 2.2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .backTop__ctn {
+        right: 2.2rem;
+        left: auto;
+    }
 }
 
 @media screen and (max-width:735px) {
