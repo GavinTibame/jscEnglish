@@ -16,4 +16,8 @@ $(".textArea").on("keyup", function () {
         count = contentArray.length,
         paddingAddBorder = $(this).outerHeight() - $(this).height();
     $(this).css("height", (150 + 8 * count + paddingAddBorder) + "px");
+});
+$("div.content dl a").on("click", function () {
+    const scrollToItem = document.getElementById(this.dataset.target);
+    window.scrollTo({ top: scrollToItem.offsetTop - 85, behavior: "smooth" });
 })
