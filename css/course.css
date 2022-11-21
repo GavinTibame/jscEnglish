@@ -112,7 +112,7 @@ footer {
     font-size: 8rem;
     font-weight: bold;
     -webkit-text-stroke: 3px var(--red-color);
-    margin: 0 80px;
+    margin: 0 10vw;
 }
 
 .title::before,
@@ -260,7 +260,8 @@ footer {
     }
 
     .course__banner span p br {
-        content: ""
+        content: "";
+        display: none;
     }
 }
 
@@ -294,6 +295,10 @@ footer {
     .title span {
         font-size: 3.8rem;
     }
+
+    .course__banner span h6 {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -307,5 +312,16 @@ footer {
 
     .course__banner span a {
         width: 60vw;
+    }
+}
+
+@media screen and (max-width:428px) {
+
+    .course__banner>span {
+        padding: 30px 0;
+    }
+
+    .course__banner span h6 {
+        font-size: 1.5rem;
     }
 }
