@@ -50,7 +50,7 @@
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function (slider, i) {
-                    return $('<button class="display__none" type="button" />');
+                    return $('<button class="slick-dots" type="button" />');
                 },
                 dots: false,
                 dotsClass: 'slick-dots',
