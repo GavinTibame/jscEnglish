@@ -195,14 +195,14 @@
                         </div>
                     </div>
                     <div class="sidebar">
-                        <div class="subscribe">
-                            <h5>訂閱文章</h5>
-                            <form method="post">
+                        <div id="subscribe" class="subscribe">
+                            <h5>訂閱消息</h5>
+                            <form action="https://sheetdb.io/api/v1/k1zbcpexk59gp" method="post" id="sheetdb-form">
                                 <div class="form__row">
-                                    <input type="text" placeholder="*姓名">
-                                    <input type="email" placeholder="*Email" required>
+                                    <input type="text" name="data[subscribeName]" placeholder="*姓名">
+                                    <input type="email" name="data[subscribeEmail]" placeholder="*Email" required>
                                     <div>
-                                        <button class="submit" type="submit" name="subscribe">
+                                        <button role="button" class="submit" type="submit" name="subscribe">
                                             訂閱我們
                                         </button>
                                     </div>
@@ -221,6 +221,7 @@
             $("#footer").load("footer.html")
         });
     </script>
+    <script src="js/news.js"></script>
 </body>
 
 </html>
