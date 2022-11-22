@@ -217,7 +217,7 @@ footer {
 }
 
 .inner .love__btn:hover {
-    animation: love .1s;
+    animation: love .2s;
 }
 
 .inner .love__btn i {
@@ -230,7 +230,7 @@ footer {
 
 @keyframes love {
     0% {
-        transform: scale(0.5);
+        transform: scale(0.8);
     }
 
     100% {
