@@ -302,7 +302,7 @@ $(document).ready(function () {
     function renderLecturerList(lecturerList) {
         lecturerList.forEach(lecturer => {
             const card = createLecturerCardElement(lecturer);
-            $("#lecturerList").append(card);
+            $("#lecturerList").prepend(card);
         });
     };
 
