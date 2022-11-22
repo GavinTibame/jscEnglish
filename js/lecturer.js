@@ -364,6 +364,7 @@ $(document).ready(function () {
                         <td>合計</td>
                         <td></td>
                         <td></td>
+                        <td></td>
                         <td>TWD$ ${grossPrice}</td>
                     </tr>`);
             $("#loveQty").text(this.data.length);

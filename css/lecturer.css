@@ -332,6 +332,20 @@ footer {
     text-align: center;
 }
 
+.dialog__content .btn__ctn {}
+
+.dialog__content .btn__empty,
+.dialog__content .btn__buy,
+.dialog__content .not__love {
+    border: 0;
+    background-color: var(--red-color);
+    padding: .5rem .8rem;
+    border-radius: 3px;
+    font-size: .8rem;
+    color: var(--bg-color);
+
+}
+
 @media screen and (max-width:970px) {
     /* .list {
         grid-template-columns: repeat(4, minmax(0px, 1fr));
