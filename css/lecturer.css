@@ -322,7 +322,9 @@ footer {
 
 .dialog__content .love__table th,
 .dialog__content .love__table td {
-    padding: .8rem 5rem .8rem 0;
+    padding: .8rem 0;
+    width: 10vw;
+    text-align: center;
     border-bottom: 1px solid var(--gray-color);
 }
 

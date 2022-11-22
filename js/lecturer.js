@@ -346,9 +346,8 @@ $(document).ready(function () {
                 grossPrice += lectureGrossPrice;
                 const tr = `
             <tr>
-                <td>
-                    ${lecture.name}
-                </td>
+                <td>${lecture.name}</td>
+                <td>${lecture.subject}</td>
                 <td>$ ${lecture.price}</td>
                 <td>${lecture.amount}</td>
                 <td>
