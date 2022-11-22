@@ -263,6 +263,7 @@ footer {
     margin-bottom: .8rem;
     width: 100%;
     line-height: 1.8rem;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1024px) {
