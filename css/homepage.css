@@ -429,6 +429,7 @@ button.slick-dots {
     margin: 10px;
     border: 0;
     background-color: var(--gray-color);
+    cursor: pointer;
 }
 
 .article__single {
