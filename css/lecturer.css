@@ -103,6 +103,7 @@ footer {
     display: flex;
     max-width: 1280px;
     margin: 0 1vw;
+    flex-wrap: wrap;
 }
 
 .lecturer nav ul li {
@@ -438,10 +439,6 @@ footer {
 }
 
 @media screen and (max-width:510px) {
-    .lecturer nav ul {
-        flex-direction: column;
-    }
-
     .lecturer nav ul li a {
         margin-bottom: 1rem;
     }

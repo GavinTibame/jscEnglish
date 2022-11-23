@@ -515,6 +515,7 @@ button.slick-dots {
 }
 
 @media screen and (max-width:770px) {
+
     .banner span {
         letter-spacing: 1rem;
         line-height: 3rem;
@@ -636,3 +637,7 @@ button.slick-dots {
         font-size: .8rem;
     }
 }
+
+/* .content {
+    background-size: 1000px auto;
+} */
