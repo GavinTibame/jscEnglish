@@ -604,6 +604,10 @@ button.slick-dots {
 }
 
 @media screen and (max-width:700px) {
+    .content {
+        background-size: 1500px auto;
+    }
+
     .feedback {
         width: 50vw;
     }
@@ -638,6 +642,4 @@ button.slick-dots {
     }
 }
 
-/* .content {
-    background-size: 1000px auto;
-} */
+/*  */

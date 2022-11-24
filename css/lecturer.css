@@ -409,6 +409,10 @@ footer {
 }
 
 @media screen and (max-width:735px) {
+    .content {
+        background-size: 1500px auto;
+    }
+
     .banner {
         height: 300px;
     }
