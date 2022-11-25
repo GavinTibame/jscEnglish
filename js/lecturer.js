@@ -284,7 +284,7 @@ $(document).ready(function () {
 
     function createLecturerCardElement(object) {
         const htmlElement = `
-        <a id="${object.id}"href="#">
+        <a id="${object.id}"href="profile.html">
             <div class="inner">
                 <img src="${object.img}" alt="">
                 <div class="text">
