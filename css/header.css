@@ -202,6 +202,266 @@ body {
     max-height: 25px;
 }
 
+
+
+.header__nav__login {
+    display: block;
+    background-color: var(--red-color);
+    width: 68%;
+    width: 5rem;
+    margin: 1rem 1.8rem;
+    padding: 0rem 1rem;
+    height: 2.8rem;
+    border: 0;
+    outline: 1px solid var(--red-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header span {
+    position: relative;
+    z-index: 1
+}
+
+.header__nav__login::before {
+    content: "";
+    min-width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 1px solid var(--red-color);
+    border-radius: 3px;
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+}
+
+.header__nav__login:hover {
+    color: var(--red-color);
+}
+
+.header__nav__login:hover::before {
+    transform: scaleX(1);
+}
+
+
+
+.dialog__login {
+    position: fixed;
+    border: none;
+    box-shadow: 0 2px 6px #ccc;
+    border-radius: 3px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.dialog__login::backdrop {
+    box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, .3);
+}
+
+.dialog__login .dialog__ctn {
+    position: relative;
+    padding: 2.5rem 1.8rem 1.8rem;
+}
+
+.dialog__login ul {
+    padding: 0rem 0rem 1rem;
+}
+
+.dialog__login .btn__ctn button {
+    width: 48%;
+    border: 0;
+    border-bottom: 2px solid var(--bg-color);
+    background-color: var(--bg-color);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.dialog__login .btn__ctn .toggle {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.dialog__login .btn__ctn button:hover,
+.dialog__login .btn__ctn .toggle {
+    border-color: var(--red-color);
+    color: var(--red-color);
+}
+
+dialog input {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    padding: .5rem .6rem;
+    border: 2px solid var(--gray-color);
+    border-radius: 2px;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: .05rem;
+}
+
+.btn__login,
+.btn__register {
+    width: 100%;
+    background-color: var(--red-color);
+    color: var(--bg-color);
+    border: 0;
+    padding: .5rem 2rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+.dialog__login button.btn__dialog {
+    border: 0;
+    background-color: transparent;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--font1-color);
+    position: absolute;
+    right: 3px;
+    top: -2px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.dialog__ctn ul small {
+    color: var(--gray-color);
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: .5rem .6rem;
+}
+
+.dialog__ctn small span {
+    margin: 0 1rem;
+}
+
+.dialog__ctn ul small::before,
+.dialog__ctn ul small::after {
+    content: "";
+    display: block;
+    flex: 1 1 auto;
+    border-top: 1px solid var(--gray-color);
+}
+
+.social__ctn a {
+    display: block;
+    width: 100%;
+    /* margin-bottom: 1.2rem; */
+    padding: .6rem .6rem;
+    border: 1px solid var(--gray-color);
+    font-size: .8rem;
+    border-radius: 3px;
+    letter-spacing: .05rem;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.social__ctn a:hover {
+    border-color: var(--font1-color);
+}
+
+.social__btn {
+    display: flex;
+    align-items: center;
+}
+
+.social__ctn .social__btn img {
+    width: 16px;
+    text-align: start;
+}
+
+.social__ctn .social__btn span {
+    margin: 0 auto;
+}
+
+.inactive {
+    display: none
+}
+
+.scrollLock {
+    overflow: hidden;
+}
+
+.read__bar {
+    display: none;
+    position: fixed;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: .3rem;
+    border-top: 1px solid var(--gray-color);
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.read__bar div {
+    background-color: var(--red-color);
+    z-index: 999;
+    width: 0%;
+    height: 3px;
+}
+
+/* --------------- logo - text ----------------- */
+
+@media screen and (max-width:970px) {
+    .header__wrapper {
+        align-items: center;
+    }
+
+    .header .desktop {
+        display: none;
+    }
+
+    .header .mobile {
+        display: inline;
+        text-align: start;
+        padding-left: 2rem;
+        height: 3.8rem;
+        box-sizing: border-box;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+
+    .header__wrapper a img {
+        width: auto;
+        padding: .2rem;
+    }
+
+    .header__nav__item>a {
+        line-height: 3.8rem;
+    }
+
+    .header__inner .header__nav__login {
+        width: 4rem;
+        padding: 0;
+        outline: 0;
+    }
+
+    .header__nav__login {
+        margin: .2rem 1rem
+    }
+
+    .nav__course .menu__ctn {
+        top: 63px;
+    }
+}
+
+.display__none {
+    display: none !important;
+}
+
+.display__block {
+    display: block !important;
+}
+
 @media screen and (max-width:735px) {
     .header__inner {
         margin: 0;
@@ -346,258 +606,24 @@ body {
     .header__nav__menu .nav__course:hover .menu__course::after {
         transform: rotate(45deg);
     }
-}
 
-.header__nav__login {
-    display: block;
-    background-color: var(--red-color);
-    width: 68%;
-    width: 5rem;
-    margin: 1rem 1.8rem;
-    padding: 0rem 1rem;
-    height: 2.8rem;
-    border: 0;
-    outline: 1px solid var(--red-color);
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 3px;
-    cursor: pointer;
-    position: relative;
-}
-
-.header span {
-    position: relative;
-    z-index: 1
-}
-
-.header__nav__login::before {
-    content: "";
-    min-width: 100%;
-    height: 100%;
-    background-color: var(--bg-color);
-    position: absolute;
-    top: 0;
-    left: 0;
-    outline: 1px solid var(--red-color);
-    border-radius: 3px;
-    transition: transform .3s ease;
-    transform: scaleX(0);
-    transform-origin: 0% 50%;
-}
-
-.header__nav__login:hover {
-    color: var(--red-color);
-}
-
-.header__nav__login:hover::before {
-    transform: scaleX(1);
-}
-
-
-
-.dialog__login {
-    position: fixed;
-    border: none;
-    box-shadow: 0 2px 6px #ccc;
-    border-radius: 3px;
-    padding: 0;
-    overflow: hidden;
-}
-
-.dialog__login::backdrop {
-    box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, .3);
-}
-
-.dialog__login .dialog__ctn {
-    position: relative;
-    padding: 2.5rem 1.8rem 1.8rem;
-}
-
-.dialog__login ul {
-    padding: 0rem 0rem 1rem;
-}
-
-.dialog__login .btn__ctn button {
-    width: 48%;
-    border: 0;
-    border-bottom: 2px solid var(--bg-color);
-    background-color: var(--bg-color);
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 1.2rem;
-    line-height: 1.6rem;
-}
-
-.dialog__login .btn__ctn .toggle {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.dialog__login .btn__ctn button:hover,
-.dialog__login .btn__ctn .toggle {
-    border-color: var(--red-color);
-    color: var(--red-color);
-}
-
-dialog input {
-    width: 100%;
-    margin-bottom: 1.2rem;
-    padding: .5rem .6rem;
-    border: 2px solid var(--gray-color);
-    border-radius: 2px;
-    display: block;
-    font-size: 1rem;
-    letter-spacing: .05rem;
-}
-
-.btn__login,
-.btn__register {
-    width: 100%;
-    background-color: var(--red-color);
-    color: var(--bg-color);
-    border: 0;
-    padding: .5rem 2rem;
-    border-radius: 2px;
-    font-size: 1rem;
-    letter-spacing: .1rem;
-    cursor: pointer;
-}
-
-.btn__dialog {
-    border: 0;
-    background-color: transparent;
-    font-size: 1.8rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: var(--font1-color);
-    position: absolute;
-    right: 3px;
-    top: -2px;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-.dialog__ctn ul small {
-    color: var(--gray-color);
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-    padding: .5rem .6rem;
-}
-
-.dialog__ctn small span {
-    margin: 0 1rem;
-}
-
-.dialog__ctn ul small::before,
-.dialog__ctn ul small::after {
-    content: "";
-    display: block;
-    flex: 1 1 auto;
-    border-top: 1px solid var(--gray-color);
-}
-
-.social__ctn a {
-    display: block;
-    width: 100%;
-    /* margin-bottom: 1.2rem; */
-    padding: .5rem .6rem;
-    border: 1px solid var(--gray-color);
-    font-size: .8rem;
-    border-radius: 3px;
-    letter-spacing: .05rem;
-    color: var(--font-color);
-    text-decoration: none;
-}
-
-.social__ctn a:hover {
-    border-color: var(--font1-color);
-}
-
-.social__btn {
-    display: flex;
-    align-items: center;
-}
-
-.social__ctn .social__btn img {
-    width: 16px;
-    text-align: start;
-}
-
-.social__ctn .social__btn span {
-    margin: 0 auto;
-}
-
-.inactive {
-    display: none
-}
-
-.scrollLock {
-    overflow: hidden;
-}
-
-.read__bar {
-    display: none;
-    position: fixed;
-    background-color: var(--bg-color);
-    width: 100%;
-    height: .3rem;
-    border-top: 1px solid var(--gray-color);
-    border-bottom: 1px solid var(--gray-color);
-}
-
-.read__bar div {
-    background-color: var(--red-color);
-    z-index: 999;
-    width: 0%;
-    height: 3px;
-}
-
-/* --------------- logo - text ----------------- */
-
-@media screen and (max-width:970px) {
-    .header__wrapper {
-        align-items: center;
+    .dialog__login button {
+        padding: .5rem;
+        line-height: 2;
     }
 
-    .header .desktop {
-        display: none;
+    .dialog__login button.btn__dialog {
+        padding: 0.2rem;
+        line-height: 1;
     }
 
-    .header .mobile {
-        display: inline;
-        text-align: start;
-        padding-left: 2rem;
-        height: 3.8rem;
-        box-sizing: border-box;
-        padding-top: .3rem;
-        padding-bottom: .3rem;
+    dialog input {
+        padding: .8rem 1rem
     }
 
-    .header__wrapper a img {
-        width: auto;
-        padding: .2rem;
+    .social__ctn a {
+        line-height: 2.1;
     }
-
-    .header__nav__item>a {
-        line-height: 3.8rem;
-    }
-
-    .header__inner .header__nav__login {
-        width: 4rem
-    }
-
-    .header__nav__login {
-        margin: .2rem 1rem
-    }
-}
-
-.display__none {
-    display: none !important;
-}
-
-.display__block {
-    display: block !important;
 }
 
 @media screen and (max-width:428px) {
