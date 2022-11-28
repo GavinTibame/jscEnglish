@@ -282,9 +282,11 @@ $(document).ready(function () {
         tid++;
     });
 
+    // TODO 用form去更新url再用router+route去auto create一個想呈現的網頁
+
     function createLecturerCardElement(object) {
         const htmlElement = `
-        <a id="${object.id}"href="profile.html">
+        <form id="${object.id}"href="profile.html">
             <div class="inner">
                 <img src="${object.img}" alt="">
                 <div class="text">
@@ -295,7 +297,7 @@ $(document).ready(function () {
                     <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
-        </a>`;
+        </form>`;
         return htmlElement;
     };
 
