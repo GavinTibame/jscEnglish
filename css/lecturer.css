@@ -152,7 +152,7 @@ footer {
     margin: 0 auto;
 }
 
-.list a {
+.list form {
     margin: 0 2.2% 4% 0;
     text-decoration: none;
     position: relative;
@@ -161,7 +161,8 @@ footer {
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
     transition: all .5s;
     animation: card .5s;
-    width: 14.3%
+    width: 14%;
+    cursor: pointer;
 }
 
 /* 6 */
@@ -189,7 +190,7 @@ footer {
     margin: 0 auto;
 }
 
-.list a:hover {
+.list form:hover {
     box-shadow: 0 8px 24px 0 rgba(0, 0, 0, .35);
     transform: translateY(-.3rem);
 }
@@ -256,10 +257,14 @@ footer {
 } */
 
 .loveList__wrapper {
-    position: sticky;
-    top: calc(100vh - 50px - 12%);
-    left: calc(100vw - 6.5%);
+    position: fixed;
+    /* top: calc(100vh - 50px - 12%); */
+    bottom: 90px;
+
+    right: .8rem;
+    /* left: calc(100vw - 6.5%); */
     width: 50px;
+    z-index: 9999;
 }
 
 .loveList__ctn {
@@ -361,7 +366,7 @@ footer {
         width: 85%
     }
 
-    .list a {
+    .list form {
         width: 17.5%;
         min-width: 15%;
     }
@@ -373,7 +378,7 @@ footer {
         width: 95%
     }
 
-    .list a {
+    .list form {
         width: 22%;
         min-width: 16%;
     }
@@ -406,6 +411,10 @@ footer {
     .list {
         width: 95%
     }
+
+    .loveList__wrapper {
+        right: 2.2rem;
+    }
 }
 
 @media screen and (max-width:735px) {
@@ -435,10 +444,14 @@ footer {
         padding: 0;
     }
 
-    .list a {
+    .list form {
         margin: 0 3vw 6vw 0;
         width: 30%;
         min-width: 16%;
+    }
+
+    .loveList__wrapper {
+        right: 2.2rem;
     }
 }
 
@@ -451,7 +464,7 @@ footer {
         width: 95%
     }
 
-    .list a {
+    .list form {
         margin: 0 auto 3.8vw;
         width: 45%;
         min-width: 15%;
@@ -465,4 +478,10 @@ footer {
 
 .display__block {
     display: block !important;
+}
+
+.loveList__wrapper.bottom_btn {
+    position: absolute;
+    bottom: -2200px;
+    left: calc(100vw - 10.2%);
 }

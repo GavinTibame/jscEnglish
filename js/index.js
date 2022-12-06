@@ -127,6 +127,15 @@ window.addEventListener("scroll", () => {
     if (scrollDetector < 100) {
         $("#readBar").removeClass("display__block");
     } else { $("#readBar").addClass("display__block"); }
+    if (btnLoveList) {
+        const percent = scrollDetector / navigationTable.footer.top;
+        if (percent >= 0.7) {
+            $(".loveList__wrapper").addClass("bottom_btn");
+            // $(".loveList__wrapper").css("top", "90%");
+        } else {
+            $(".loveList__wrapper").removeClass("bottom_btn");
+        }
+    }
 });
 
 window.addEventListener("scroll", () => {

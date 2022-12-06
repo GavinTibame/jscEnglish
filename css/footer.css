@@ -80,8 +80,8 @@ footer a {
 .backTop__ctn {
     position: fixed;
     bottom: -100px;
-    right: 2.2rem;
-    left: calc(100vw - 6.5%);
+    right: .8rem;
+    /* left: calc(100vw - 6.5%); */
     height: 10.8rem;
 }
 
